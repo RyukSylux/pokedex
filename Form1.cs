@@ -266,10 +266,30 @@ namespace PokedexApp
                 MessageBox.Show("Veuillez sélectionner un type dans la liste déroulante.");
             }
         }
+
+        private void SearchByName()
+        {
+            if (txtName.Text != null)
+            {
+                string search = txtName.Text;
+                var filteredPokemons = pokemons.FindAll(p => p.Name == search);
+
+                listBoxPokemons.DataSource = null; // Réinitialise la source de données
+                listBoxPokemons.DataSource = filteredPokemons;
+            }
+            else
+            {
+                MessageBox.Show("Aucun pokemon trouvé.");
+            }
+        }
         private void btnSearchByType_Click(object sender, EventArgs e)
         {
             SearchByType();
         }
 
+        private void buttonSearchName_Click(object sender, EventArgs e)
+        {
+            SearchByName();
+        }
     }
 }
