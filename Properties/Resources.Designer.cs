@@ -59,5 +59,15 @@ namespace PokedexApp.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokedex_entry_template_by_llman441_d5hroi3_fullview {
+            get {
+                object obj = ResourceManager.GetObject("pokedex_entry_template_by_llman441_d5hroi3-fullview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

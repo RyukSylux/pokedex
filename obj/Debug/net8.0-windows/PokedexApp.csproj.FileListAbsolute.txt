@@ -33,3 +33,4 @@ C:\Users\pablo\source\repos\pokedex\obj\Debug\net8.0-windows\refint\PokedexApp.d
 C:\Users\pablo\source\repos\pokedex\obj\Debug\net8.0-windows\PokedexApp.pdb
 C:\Users\pablo\source\repos\pokedex\obj\Debug\net8.0-windows\PokedexApp.genruntimeconfig.cache
 C:\Users\pablo\source\repos\pokedex\obj\Debug\net8.0-windows\ref\PokedexApp.dll
+C:\Users\sylux\source\repos\PokedexApp\PokedexApp\obj\Debug\net8.0-windows\PokedexApp.sourcelink.json

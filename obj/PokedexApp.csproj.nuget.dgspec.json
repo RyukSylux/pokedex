@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pablo\\source\\repos\\pokedex\\PokedexApp.csproj": {}
+    "C:\\Users\\sylux\\source\\repos\\PokedexApp\\PokedexApp\\PokedexApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pablo\\source\\repos\\pokedex\\PokedexApp.csproj": {
+    "C:\\Users\\sylux\\source\\repos\\PokedexApp\\PokedexApp\\PokedexApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pablo\\source\\repos\\pokedex\\PokedexApp.csproj",
+        "projectUniqueName": "C:\\Users\\sylux\\source\\repos\\PokedexApp\\PokedexApp\\PokedexApp.csproj",
         "projectName": "PokedexApp",
-        "projectPath": "C:\\Users\\pablo\\source\\repos\\pokedex\\PokedexApp.csproj",
-        "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pablo\\source\\repos\\pokedex\\obj\\",
+        "projectPath": "C:\\Users\\sylux\\source\\repos\\PokedexApp\\PokedexApp\\PokedexApp.csproj",
+        "packagesPath": "C:\\Users\\sylux\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sylux\\source\\repos\\PokedexApp\\PokedexApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sylux\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

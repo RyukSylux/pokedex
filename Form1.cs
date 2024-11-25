@@ -18,7 +18,7 @@ namespace PokedexApp
             // Liste de Pokémon préremplis
             pokemons = new List<Pokemon>
                 {
-                    new Pokemon { ID = 1, Name = "Bulbizarre", Type = "Plante", Description = "Un Pokémon graine qui aime le soleil.", Weight = 6.9, Height = 0.7, IsCaptured = true, ImagePath = "" },
+                    new Pokemon { ID = 1, Name = "Bulbizarre", Type = "Plante", Description = "Un Pokémon graine qui aime le soleil.", Weight = 6.9, Height = 0.7, IsCaptured = true, ImagePath = $"\\images\\bulbizarre.png" },
                     new Pokemon { ID = 2, Name = "Salamèche", Type = "Feu", Description = "Sa queue brûle en permanence.", Weight = 8.5, Height = 0.6, IsCaptured = false, ImagePath = "" },
                     new Pokemon { ID = 3, Name = "Carapuce", Type = "Eau", Description = "Sa carapace le protège des attaques.", Weight = 9.0, Height = 0.5, IsCaptured = true, ImagePath = "" },
                     new Pokemon { ID = 4, Name = "Pikachu", Type = "Électrique", Description = "Un Pokémon très populaire qui stocke l'électricité dans ses joues.", Weight = 6.0, Height = 0.4, IsCaptured = false, ImagePath = "" },
