@@ -27,6 +27,7 @@ C:\Users\pablo\source\repos\pokedex\obj\Debug\net8.0-windows\PokedexApp.Generate
 C:\Users\pablo\source\repos\pokedex\obj\Debug\net8.0-windows\PokedexApp.AssemblyInfoInputs.cache
 C:\Users\pablo\source\repos\pokedex\obj\Debug\net8.0-windows\PokedexApp.AssemblyInfo.cs
 C:\Users\pablo\source\repos\pokedex\obj\Debug\net8.0-windows\PokedexApp.csproj.CoreCompileInputs.cache
+C:\Users\pablo\source\repos\pokedex\obj\Debug\net8.0-windows\PokedexApp.sourcelink.json
 C:\Users\pablo\source\repos\pokedex\obj\Debug\net8.0-windows\PokedexApp.dll
 C:\Users\pablo\source\repos\pokedex\obj\Debug\net8.0-windows\refint\PokedexApp.dll
 C:\Users\pablo\source\repos\pokedex\obj\Debug\net8.0-windows\PokedexApp.pdb
