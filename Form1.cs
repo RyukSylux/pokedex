@@ -17,8 +17,8 @@ namespace PokedexApp
 
         public Form1()
         {
-        // Liste de Pokémon préremplis
-        pokemons = new List<Pokemon>
+            // Liste de Pokémon préremplis
+            pokemons = new List<Pokemon>
                 {
                     new Pokemon { ID = 1, Name = "Bulbizarre", Type = "Plante", Description = "Un Pokémon graine qui aime le soleil.", Weight = 6.9, Height = 0.7, IsCaptured = true, ImagePath = ImagesFolderPath+"bulbizarre.png" },
                     new Pokemon { ID = 2, Name = "Salamèche", Type = "Feu", Description = "Sa queue brûle en permanence.", Weight = 8.5, Height = 0.6, IsCaptured = false, ImagePath = ImagesFolderPath+"salameche.png" },
