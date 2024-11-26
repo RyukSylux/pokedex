@@ -272,7 +272,7 @@ namespace PokedexApp
             if (txtName.Text != null)
             {
                 string search = txtName.Text;
-                var filteredPokemons = pokemons.FindAll(p => p.Name.Contains(search));
+                var filteredPokemons = pokemons.FindAll(p => p.Name == search);
 
                 listBoxPokemons.DataSource = null; // Réinitialise la source de données
                 listBoxPokemons.DataSource = filteredPokemons;
