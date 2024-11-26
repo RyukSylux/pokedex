@@ -180,6 +180,7 @@ namespace PokedexApp
             txtImagePath.Name = "txtImagePath";
             txtImagePath.Size = new Size(512, 23);
             txtImagePath.TabIndex = 3;
+            txtImagePath.Visible = false;
             // 
             // pictureBox1
             // 
