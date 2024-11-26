@@ -2,6 +2,8 @@ using System.Xml.Linq;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Drawing.Text;
+using System.Reflection;
 
 namespace PokedexApp
 {
@@ -10,44 +12,44 @@ namespace PokedexApp
     {
         private List<Pokemon> pokemons = new List<Pokemon>();
         private int nextId = 1; // Pour auto-incrémenter les IDs
-
+        private static readonly string ImagesFolderPath = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, "images\\");
 
 
         public Form1()
         {
-            // Liste de Pokémon préremplis
-            pokemons = new List<Pokemon>
+        // Liste de Pokémon préremplis
+        pokemons = new List<Pokemon>
                 {
-                    new Pokemon { ID = 1, Name = "Bulbizarre", Type = "Plante", Description = "Un Pokémon graine qui aime le soleil.", Weight = 6.9, Height = 0.7, IsCaptured = true, ImagePath = "" },
-                    new Pokemon { ID = 2, Name = "Salamèche", Type = "Feu", Description = "Sa queue brûle en permanence.", Weight = 8.5, Height = 0.6, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 3, Name = "Carapuce", Type = "Eau", Description = "Sa carapace le protège des attaques.", Weight = 9.0, Height = 0.5, IsCaptured = true, ImagePath = "" },
-                    new Pokemon { ID = 4, Name = "Pikachu", Type = "Électrique", Description = "Un Pokémon très populaire qui stocke l'électricité dans ses joues.", Weight = 6.0, Height = 0.4, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 5, Name = "Roucool", Type = "Vol", Description = "Il est souvent trouvé dans les champs et forêts.", Weight = 1.8, Height = 0.3, IsCaptured = true, ImagePath = "" },
-                    new Pokemon { ID = 6, Name = "Rattata", Type = "Normal", Description = "Un rongeur rapide et agressif.", Weight = 3.5, Height = 0.3, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 7, Name = "Sabelette", Type = "Sol", Description = "Il s'enroule pour se protéger.", Weight = 12.0, Height = 0.6, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 8, Name = "Goupix", Type = "Feu", Description = "Sa queue s'illumine lorsqu'il est heureux.", Weight = 9.9, Height = 0.6, IsCaptured = true, ImagePath = "" },
-                    new Pokemon { ID = 9, Name = "Mélofée", Type = "Fée", Description = "Il danse à la lumière de la lune.", Weight = 7.5, Height = 0.6, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 10, Name = "Paras", Type = "Insecte", Description = "Il transporte des spores sur son dos.", Weight = 5.4, Height = 0.3, IsCaptured = true, ImagePath = "" },
-                    new Pokemon { ID = 11, Name = "Mimitoss", Type = "Insecte", Description = "Ses yeux brillants sont fascinants.", Weight = 30.0, Height = 1.0, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 12, Name = "Tentacool", Type = "Eau", Description = "Un Pokémon marin avec des tentacules venimeux.", Weight = 45.5, Height = 0.9, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 13, Name = "Ponyta", Type = "Feu", Description = "Ses flammes ne brûlent que s'il est en danger.", Weight = 30.0, Height = 1.0, IsCaptured = true, ImagePath = "" },
-                    new Pokemon { ID = 14, Name = "Magnéti", Type = "Électrique", Description = "Il génère des champs magnétiques puissants.", Weight = 6.0, Height = 0.3, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 15, Name = "Onix", Type = "Roche", Description = "Un énorme serpent de pierre.", Weight = 210.0, Height = 8.8, IsCaptured = true, ImagePath = "" },
-                    new Pokemon { ID = 16, Name = "Fantominus", Type = "Spectre", Description = "Un Pokémon gaz qui peut traverser les murs.", Weight = 0.1, Height = 1.3, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 17, Name = "Kranidos", Type = "Roche", Description = "Un dinosaure avec une tête dure comme le roc.", Weight = 37.0, Height = 0.9, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 18, Name = "Évoli", Type = "Normal", Description = "Il peut évoluer sous différentes formes.", Weight = 6.5, Height = 0.3, IsCaptured = true, ImagePath = "" },
-                    new Pokemon { ID = 19, Name = "Lixy", Type = "Électrique", Description = "Un lionceau qui émet des étincelles.", Weight = 9.5, Height = 0.5, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 20, Name = "Cerfrousse", Type = "Normal", Description = "Il ressemble à un cerf majestueux.", Weight = 71.2, Height = 1.4, IsCaptured = true, ImagePath = "" },
-                    new Pokemon { ID = 21, Name = "Azurill", Type = "Eau", Description = "Un petit Pokémon qui joue avec sa queue flottante.", Weight = 2.0, Height = 0.2, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 22, Name = "Tiplouf", Type = "Eau", Description = "Un pingouin élégant et courageux.", Weight = 5.2, Height = 0.4, IsCaptured = true, ImagePath = "" },
-                    new Pokemon { ID = 23, Name = "Lucario", Type = "Combat", Description = "Il ressent les auras des êtres vivants.", Weight = 54.0, Height = 1.2, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 24, Name = "Draco", Type = "Dragon", Description = "Un Pokémon dragon au corps élégant.", Weight = 16.5, Height = 4.0, IsCaptured = true, ImagePath = "" },
-                    new Pokemon { ID = 25, Name = "Tortipouss", Type = "Plante", Description = "Il porte une petite pousse sur sa tête.", Weight = 10.2, Height = 0.4, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 26, Name = "Arcko", Type = "Plante", Description = "Un Pokémon agile et vif.", Weight = 5.0, Height = 0.5, IsCaptured = true, ImagePath = "" },
-                    new Pokemon { ID = 27, Name = "Balignon", Type = "Plante", Description = "Il ressemble à un champignon.", Weight = 4.5, Height = 0.3, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 28, Name = "Pachirisu", Type = "Électrique", Description = "Un écureuil électrique rapide.", Weight = 3.9, Height = 0.4, IsCaptured = true, ImagePath = "" },
-                    new Pokemon { ID = 29, Name = "Démanta", Type = "Eau", Description = "Un Pokémon marin qui glisse sur l'eau.", Weight = 220.0, Height = 2.1, IsCaptured = false, ImagePath = "" },
-                    new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gardien de l'équilibre écologique.", Weight = 305.0, Height = 5.0, IsCaptured = true, ImagePath = "" }
+                    new Pokemon { ID = 1, Name = "Bulbizarre", Type = "Plante", Description = "Un Pokémon graine qui aime le soleil.", Weight = 6.9, Height = 0.7, IsCaptured = true, ImagePath = ImagesFolderPath+"bulbizarre.png" },
+                    new Pokemon { ID = 2, Name = "Salamèche", Type = "Feu", Description = "Sa queue brûle en permanence.", Weight = 8.5, Height = 0.6, IsCaptured = false, ImagePath = ImagesFolderPath+"salameche.png" },
+                    new Pokemon { ID = 3, Name = "Carapuce", Type = "Eau", Description = "Sa carapace le protège des attaques.", Weight = 9.0, Height = 0.5, IsCaptured = true, ImagePath = ImagesFolderPath+"carapuce.png" },
+                    new Pokemon { ID = 4, Name = "Pikachu", Type = "Électrique", Description = "Un Pokémon très populaire qui stocke l'électricité dans ses joues.", Weight = 6.0, Height = 0.4, IsCaptured = false, ImagePath = ImagesFolderPath+"pikachu.png" },
+                    new Pokemon { ID = 5, Name = "Roucool", Type = "Vol", Description = "Il est souvent trouvé dans les champs et forêts.", Weight = 1.8, Height = 0.3, IsCaptured = true, ImagePath = ImagesFolderPath+"roucool.png" },
+                    new Pokemon { ID = 6, Name = "Rattata", Type = "Normal", Description = "Un rongeur rapide et agressif.", Weight = 3.5, Height = 0.3, IsCaptured = false, ImagePath = ImagesFolderPath+"rattata.png" },
+                    new Pokemon { ID = 7, Name = "Sabelette", Type = "Sol", Description = "Il s'enroule pour se protéger.", Weight = 12.0, Height = 0.6, IsCaptured = false, ImagePath = ImagesFolderPath+ "sabelette.png"},
+                    new Pokemon { ID = 8, Name = "Goupix", Type = "Feu", Description = "Sa queue s'illumine lorsqu'il est heureux.", Weight = 9.9, Height = 0.6, IsCaptured = true, ImagePath = ImagesFolderPath+"goupix.png" },
+                    new Pokemon { ID = 9, Name = "Mélofée", Type = "Fée", Description = "Il danse à la lumière de la lune.", Weight = 7.5, Height = 0.6, IsCaptured = false, ImagePath = ImagesFolderPath+ "melofee.png"},
+                    new Pokemon { ID = 10, Name = "Paras", Type = "Insecte", Description = "Il transporte des spores sur son dos.", Weight = 5.4, Height = 0.3, IsCaptured = true, ImagePath = ImagesFolderPath+ "paras.png"},
+                    new Pokemon { ID = 11, Name = "Mimitoss", Type = "Insecte", Description = "Ses yeux brillants sont fascinants.", Weight = 30.0, Height = 1.0, IsCaptured = false, ImagePath = ImagesFolderPath+ "mimitoss.png" },
+                    new Pokemon { ID = 12, Name = "Tentacool", Type = "Eau", Description = "Un Pokémon marin avec des tentacules venimeux.", Weight = 45.5, Height = 0.9, IsCaptured = false, ImagePath = ImagesFolderPath+ "tentacool.png" },
+                    new Pokemon { ID = 13, Name = "Ponyta", Type = "Feu", Description = "Ses flammes ne brûlent que s'il est en danger.", Weight = 30.0, Height = 1.0, IsCaptured = true, ImagePath = ImagesFolderPath+ "ponyta.png" },
+                    new Pokemon { ID = 14, Name = "Magnéti", Type = "Électrique", Description = "Il génère des champs magnétiques puissants.", Weight = 6.0, Height = 0.3, IsCaptured = false, ImagePath = ImagesFolderPath+ "magneti.png" },
+                    new Pokemon { ID = 15, Name = "Onix", Type = "Roche", Description = "Un énorme serpent de pierre.", Weight = 210.0, Height = 8.8, IsCaptured = true, ImagePath = ImagesFolderPath + "onix.png" },
+                    new Pokemon { ID = 16, Name = "Fantominus", Type = "Spectre", Description = "Un Pokémon gaz qui peut traverser les murs.", Weight = 0.1, Height = 1.3, IsCaptured = false, ImagePath = ImagesFolderPath + "fantominus.png" },
+                    new Pokemon { ID = 17, Name = "Kranidos", Type = "Roche", Description = "Un dinosaure avec une tête dure comme le roc.", Weight = 37.0, Height = 0.9, IsCaptured = false, ImagePath = ImagesFolderPath + "kranidos.png" },
+                    new Pokemon { ID = 18, Name = "Évoli", Type = "Normal", Description = "Il peut évoluer sous différentes formes.", Weight = 6.5, Height = 0.3, IsCaptured = true, ImagePath = ImagesFolderPath + "evoli.png" },
+                    new Pokemon { ID = 19, Name = "Lixy", Type = "Électrique", Description = "Un lionceau qui émet des étincelles.", Weight = 9.5, Height = 0.5, IsCaptured = false, ImagePath = ImagesFolderPath + "lixy.png" },
+                    new Pokemon { ID = 20, Name = "Cerfrousse", Type = "Normal", Description = "Il ressemble à un cerf majestueux.", Weight = 71.2, Height = 1.4, IsCaptured = true, ImagePath = ImagesFolderPath + "cerfrousse.png" },
+                    new Pokemon { ID = 21, Name = "Azurill", Type = "Eau", Description = "Un petit Pokémon qui joue avec sa queue flottante.", Weight = 2.0, Height = 0.2, IsCaptured = false, ImagePath = ImagesFolderPath + "azurill.png" },
+                    new Pokemon { ID = 22, Name = "Tiplouf", Type = "Eau", Description = "Un pingouin élégant et courageux.", Weight = 5.2, Height = 0.4, IsCaptured = true, ImagePath = ImagesFolderPath + "tiplouf.png" },
+                    new Pokemon { ID = 23, Name = "Lucario", Type = "Combat", Description = "Il ressent les auras des êtres vivants.", Weight = 54.0, Height = 1.2, IsCaptured = false, ImagePath = ImagesFolderPath + "lucario.png" },
+                    new Pokemon { ID = 24, Name = "Draco", Type = "Dragon", Description = "Un Pokémon dragon au corps élégant.", Weight = 16.5, Height = 4.0, IsCaptured = true, ImagePath = ImagesFolderPath + "draco.png" },
+                    new Pokemon { ID = 25, Name = "Tortipouss", Type = "Plante", Description = "Il porte une petite pousse sur sa tête.", Weight = 10.2, Height = 0.4, IsCaptured = false, ImagePath = ImagesFolderPath + "tortipouss.png" },
+                    new Pokemon { ID = 26, Name = "Arcko", Type = "Plante", Description = "Un Pokémon agile et vif.", Weight = 5.0, Height = 0.5, IsCaptured = true, ImagePath = ImagesFolderPath + "arcko.png" },
+                    new Pokemon { ID = 27, Name = "Balignon", Type = "Plante", Description = "Il ressemble à un champignon.", Weight = 4.5, Height = 0.3, IsCaptured = false, ImagePath = ImagesFolderPath + "balignon.png" },
+                    new Pokemon { ID = 28, Name = "Pachirisu", Type = "Électrique", Description = "Un écureuil électrique rapide.", Weight = 3.9, Height = 0.4, IsCaptured = true, ImagePath = ImagesFolderPath + "pachirisu.png" },
+                    new Pokemon { ID = 29, Name = "Démanta", Type = "Eau", Description = "Un Pokémon marin qui glisse sur l'eau.", Weight = 220.0, Height = 2.1, IsCaptured = false, ImagePath = ImagesFolderPath + "demanta.png" },
+                    new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gardien de l'équilibre écologique.", Weight = 305.0, Height = 5.0, IsCaptured = true, ImagePath = ImagesFolderPath + "zygarde.png" }
                 };
             InitializeComponent();
 
@@ -68,6 +70,11 @@ namespace PokedexApp
 
                     // Stocker le chemin de l'image temporairement
                     txtImagePath.Text = openFileDialog.FileName;
+                }
+                else
+                {
+                    pictureBoxPokemon.ImageLocation = ImagesFolderPath + "missingno.png";
+                    txtImagePath.Text = ImagesFolderPath + "missingno.png";
                 }
             }
 
@@ -124,6 +131,11 @@ namespace PokedexApp
                             // Stocker le chemin de l'image temporairement
                             txtImagePath.Text = openFileDialog.FileName;
                         }
+                        else
+                        {
+                            pictureBoxPokemon.ImageLocation = ImagesFolderPath + "missingno.png";
+                            txtImagePath.Text = ImagesFolderPath + "missingno.png";
+                        }
                     }
 
 
@@ -157,6 +169,7 @@ namespace PokedexApp
                 txtWeight.Text = selectedPokemon.Weight.ToString();
                 txtHeight.Text = selectedPokemon.Height.ToString();
                 chkCaptured.Checked = selectedPokemon.IsCaptured;
+                txtImagePath.Text = selectedPokemon.ImagePath;
 
                 if (!string.IsNullOrEmpty(selectedPokemon.ImagePath) && System.IO.File.Exists(selectedPokemon.ImagePath))
                 {
@@ -197,6 +210,7 @@ namespace PokedexApp
             txtHeight.Text = "";
             chkCaptured.Checked = false;
             txtImagePath.Text = "";
+            pictureBoxPokemon.ImageLocation = null;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -272,7 +286,7 @@ namespace PokedexApp
             if (txtName.Text != null)
             {
                 string search = txtName.Text;
-                var filteredPokemons = pokemons.FindAll(p => p.Name == search);
+                var filteredPokemons = pokemons.FindAll(p => p.Name.Contains(search));
 
                 listBoxPokemons.DataSource = null; // Réinitialise la source de données
                 listBoxPokemons.DataSource = filteredPokemons;
