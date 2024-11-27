@@ -54,7 +54,7 @@ namespace PokedexApp
             // 
             // buttonSearchName
             // 
-            buttonSearchName.Location = new Point(137, 363);
+            buttonSearchName.Location = new Point(112, 352);
             buttonSearchName.Name = "buttonSearchName";
             buttonSearchName.Size = new Size(141, 23);
             buttonSearchName.TabIndex = 12;
@@ -64,7 +64,7 @@ namespace PokedexApp
             // 
             // btnSearchByType
             // 
-            btnSearchByType.Location = new Point(296, 362);
+            btnSearchByType.Location = new Point(234, 323);
             btnSearchByType.Name = "btnSearchByType";
             btnSearchByType.Size = new Size(145, 23);
             btnSearchByType.TabIndex = 11;
@@ -76,14 +76,14 @@ namespace PokedexApp
             // 
             cmbType.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbType.FormattingEnabled = true;
-            cmbType.Location = new Point(259, 105);
+            cmbType.Location = new Point(218, 98);
             cmbType.Name = "cmbType";
-            cmbType.Size = new Size(171, 23);
+            cmbType.Size = new Size(137, 23);
             cmbType.TabIndex = 10;
             // 
             // btnList
             // 
-            btnList.Location = new Point(0, 363);
+            btnList.Location = new Point(3, 323);
             btnList.Name = "btnList";
             btnList.Size = new Size(131, 23);
             btnList.TabIndex = 9;
@@ -93,7 +93,7 @@ namespace PokedexApp
             // 
             // btnEdit
             // 
-            btnEdit.Location = new Point(182, 312);
+            btnEdit.Location = new Point(150, 294);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(75, 23);
             btnEdit.TabIndex = 8;
@@ -103,7 +103,7 @@ namespace PokedexApp
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(366, 312);
+            btnDelete.Location = new Point(304, 294);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(75, 23);
             btnDelete.TabIndex = 7;
@@ -113,7 +113,7 @@ namespace PokedexApp
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(0, 312);
+            btnAdd.Location = new Point(3, 294);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(75, 23);
             btnAdd.TabIndex = 6;
@@ -127,7 +127,7 @@ namespace PokedexApp
             chkCaptured.BackColor = Color.Transparent;
             chkCaptured.BackgroundImageLayout = ImageLayout.None;
             chkCaptured.FlatStyle = FlatStyle.System;
-            chkCaptured.Location = new Point(346, 195);
+            chkCaptured.Location = new Point(285, 179);
             chkCaptured.Name = "chkCaptured";
             chkCaptured.Size = new Size(90, 20);
             chkCaptured.TabIndex = 5;
@@ -136,44 +136,49 @@ namespace PokedexApp
             // 
             // txtHeight
             // 
-            txtHeight.Location = new Point(292, 143);
+            txtHeight.BackColor = SystemColors.Info;
+            txtHeight.BorderStyle = BorderStyle.None;
+            txtHeight.Location = new Point(270, 137);
             txtHeight.Name = "txtHeight";
             txtHeight.PlaceholderText = "Taille";
-            txtHeight.Size = new Size(76, 23);
+            txtHeight.Size = new Size(36, 16);
             txtHeight.TabIndex = 4;
             // 
             // txtWeight
             // 
-            txtWeight.Location = new Point(292, 172);
+            txtWeight.BackColor = SystemColors.Info;
+            txtWeight.BorderStyle = BorderStyle.None;
+            txtWeight.Location = new Point(270, 159);
             txtWeight.Name = "txtWeight";
             txtWeight.PlaceholderText = "Poids";
-            txtWeight.Size = new Size(76, 23);
+            txtWeight.Size = new Size(36, 16);
             txtWeight.TabIndex = 3;
             // 
             // txtName
             // 
-            txtName.Location = new Point(222, 39);
+            txtName.BorderStyle = BorderStyle.None;
+            txtName.Location = new Point(194, 37);
             txtName.Name = "txtName";
             txtName.PlaceholderText = "Nom";
-            txtName.Size = new Size(208, 23);
+            txtName.Size = new Size(174, 16);
             txtName.TabIndex = 0;
             // 
             // listBoxPokemons
             // 
             listBoxPokemons.FormattingEnabled = true;
             listBoxPokemons.ItemHeight = 15;
-            listBoxPokemons.Location = new Point(40, 186);
+            listBoxPokemons.Location = new Point(42, 169);
             listBoxPokemons.Name = "listBoxPokemons";
-            listBoxPokemons.Size = new Size(410, 409);
+            listBoxPokemons.Size = new Size(417, 364);
             listBoxPokemons.TabIndex = 1;
             listBoxPokemons.SelectedIndexChanged += listBoxPokemons_SelectedIndexChanged;
             // 
             // pictureBoxPokemon
             // 
             pictureBoxPokemon.BackColor = Color.FromArgb(255, 255, 128);
-            pictureBoxPokemon.Location = new Point(10, 48);
+            pictureBoxPokemon.Location = new Point(8, 44);
             pictureBoxPokemon.Name = "pictureBoxPokemon";
-            pictureBoxPokemon.Size = new Size(144, 134);
+            pictureBoxPokemon.Size = new Size(130, 130);
             pictureBoxPokemon.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxPokemon.TabIndex = 2;
             pictureBoxPokemon.TabStop = false;
@@ -189,9 +194,9 @@ namespace PokedexApp
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Location = new Point(3, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(441, 306);
+            pictureBox1.Size = new Size(376, 288);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
@@ -213,17 +218,18 @@ namespace PokedexApp
             groupBox1.Controls.Add(btnAdd);
             groupBox1.Controls.Add(chkCaptured);
             groupBox1.Controls.Add(pictureBox1);
-            groupBox1.Location = new Point(549, 217);
+            groupBox1.Location = new Point(590, 169);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(444, 392);
+            groupBox1.Size = new Size(381, 378);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             // 
             // txtDescription
             // 
-            txtDescription.Location = new Point(11, 221);
+            txtDescription.BorderStyle = BorderStyle.None;
+            txtDescription.Location = new Point(15, 204);
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(421, 80);
+            txtDescription.Size = new Size(351, 71);
             txtDescription.TabIndex = 14;
             txtDescription.Text = "Description";
             // 
@@ -233,7 +239,7 @@ namespace PokedexApp
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.emptyTile;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1005, 730);
+            ClientSize = new Size(1016, 654);
             Controls.Add(listBoxPokemons);
             Controls.Add(groupBox1);
             DoubleBuffered = true;

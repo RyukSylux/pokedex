@@ -116,3 +116,5 @@ C:\Users\sylux\source\repos\PokedexApp\PokedexApp\bin\Debug\net8.0-windows\image
 C:\Users\sylux\source\repos\PokedexApp\PokedexApp\bin\Debug\net8.0-windows\images\zygarde.png
 C:\Users\sylux\source\repos\PokedexApp\PokedexApp\bin\Debug\net8.0-windows\images\logo.jpg
 C:\Users\sylux\source\repos\PokedexApp\PokedexApp\bin\Debug\net8.0-windows\images\emptyTile.png
+C:\Users\sylux\Documents\Trieur\github\pokedex\bin\Debug\net8.0-windows\images\emptyTile.png
+C:\Users\sylux\Documents\Trieur\github\pokedex\bin\Debug\net8.0-windows\images\logo.jpg
