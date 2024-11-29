@@ -1,33 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\",
+  "WorkspaceRootPath": "C:\\Users\\pablo\\source\\repos\\pokedex\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\sylux\\documents\\trieur\\github\\pokedex\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\pablo\\source\\repos\\pokedex\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\sylux\\documents\\trieur\\github\\pokedex\\pokedexapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|solutionrelative:pokedexapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|C:\\Users\\pablo\\source\\repos\\pokedex\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\sylux\\documents\\trieur\\github\\pokedex\\pokedexapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\pablo\\source\\repos\\pokedex\\pokedexapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|solutionrelative:pokedexapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\pablo\\source\\repos\\pokedex\\pokedexapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|solutionrelative:pokedexapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\sylux\\documents\\trieur\\github\\pokedex\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\pablo\\source\\repos\\pokedex\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\sylux\\documents\\trieur\\github\\pokedex\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\pablo\\source\\repos\\pokedex\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\sylux\\documents\\trieur\\github\\pokedex\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\pablo\\source\\repos\\pokedex\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -41,12 +41,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -56,9 +52,9 @@
               "DocumentIndex": 7,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ViewState": "AgIAADUNAAAAAAAAAIAwwFUNAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2024-11-25T17:43:55.509Z"
@@ -67,9 +63,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "PokedexApp.csproj",
-              "DocumentMoniker": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\PokedexApp.csproj",
+              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\pokedex\\PokedexApp.csproj",
               "RelativeDocumentMoniker": "PokedexApp.csproj",
-              "ToolTip": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\PokedexApp.csproj",
+              "ToolTip": "C:\\Users\\pablo\\source\\repos\\pokedex\\PokedexApp.csproj",
               "RelativeToolTip": "PokedexApp.csproj",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -79,9 +75,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\pokedex\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Program.cs",
+              "ToolTip": "C:\\Users\\pablo\\source\\repos\\pokedex\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -91,9 +87,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\pokedex\\Class1.cs",
               "RelativeDocumentMoniker": "Class1.cs",
-              "ToolTip": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Class1.cs",
+              "ToolTip": "C:\\Users\\pablo\\source\\repos\\pokedex\\Class1.cs",
               "RelativeToolTip": "Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -103,9 +99,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\pokedex\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\pablo\\source\\repos\\pokedex\\Form1.Designer.cs",
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AgIAAKkAAAAAAAAAAAAIwLkAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -113,11 +109,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PokedexApp",
-              "DocumentMoniker": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\PokedexApp.csproj",
+              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\pokedex\\PokedexApp.csproj",
               "RelativeDocumentMoniker": "PokedexApp.csproj",
-              "ToolTip": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\PokedexApp.csproj",
+              "ToolTip": "C:\\Users\\pablo\\source\\repos\\pokedex\\PokedexApp.csproj",
               "RelativeToolTip": "PokedexApp.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-11-25T17:10:22.059Z"
@@ -126,26 +122,25 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\pokedex\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Form1.cs",
+              "ToolTip": "C:\\Users\\pablo\\source\\repos\\pokedex\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAPkAAAAAAAAAAAAkwCABAABUAAAAAAAAAA==",
+              "ViewState": "AgIAABQBAAAAAAAAAAAiwBIBAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T13:50:34.66Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Form1.cs",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Conception]",
+              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\pokedex\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\pablo\\source\\repos\\pokedex\\Form1.cs [Conception]",
+              "RelativeToolTip": "Form1.cs [Conception]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T17:11:10.045Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-25T17:11:10.045Z"
             }
           ]
         }
