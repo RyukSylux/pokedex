@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>images\logo.ico</ApplicationIcon>
   </PropertyGroup>
 
 
@@ -18,6 +19,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Content Include="images\logo.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -27,6 +32,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="images\*.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="images\logo.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
