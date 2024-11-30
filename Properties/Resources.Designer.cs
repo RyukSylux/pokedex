@@ -61,11 +61,12 @@ namespace PokedexApp.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à .
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static string bulbizarre {
+        internal static System.Drawing.Bitmap emptyTile {
             get {
-                return ResourceManager.GetString("bulbizarre", resourceCulture);
+                object obj = ResourceManager.GetObject("emptyTile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
