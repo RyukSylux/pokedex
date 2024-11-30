@@ -11,6 +11,7 @@
         public double Weight { get; set; }
         public double Height { get; set; }
         public bool IsCaptured { get; set; }
+        public string Weakness { get; set; }
         public string ImagePath { get; set; } // Chemin de l'image
       
         public override string ToString()
