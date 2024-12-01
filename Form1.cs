@@ -20,36 +20,37 @@ namespace PokedexApp
             // Liste de Pokémon préremplis
             pokemons = new List<Pokemon>
                 {
-          new Pokemon { ID = 1, Name = "Bulbizarre", Type = "Plante", Description = "Un Pokémon graine qui aime le soleil.", Weight = 6.9, Height = 0.7, IsCaptured = true, ImagePath = ImagesFolderPath+"bulbizarre.png", Region = "Kanto", Weakness = "Feu" },
-new Pokemon { ID = 2, Name = "Salamèche", Type = "Feu", Description = "Sa queue brûle en permanence.", Weight = 8.5, Height = 0.6, IsCaptured = false, ImagePath = ImagesFolderPath+"salameche.png", Region = "Kanto", Weakness = "Eau" },
-new Pokemon { ID = 3, Name = "Carapuce", Type = "Eau", Description = "Sa carapace le protège des attaques.", Weight = 9.0, Height = 0.5, IsCaptured = true, ImagePath = ImagesFolderPath+"carapuce.png", Region = "Kanto", Weakness = "Plante" },
-new Pokemon { ID = 4, Name = "Pikachu", Type = "Électrique", Description = "Un Pokémon très populaire qui stocke l'électricité dans ses joues.", Weight = 6.0, Height = 0.4, IsCaptured = false, ImagePath = ImagesFolderPath+"pikachu.png", Region = "Kanto", Weakness = "Sol" },
-new Pokemon { ID = 5, Name = "Roucool", Type = "Vol", Description = "Il est souvent trouvé dans les champs et forêts.", Weight = 1.8, Height = 0.3, IsCaptured = true, ImagePath = ImagesFolderPath+"roucool.png", Region = "Kanto", Weakness = "Électrique" },
-new Pokemon { ID = 6, Name = "Rattata", Type = "Normal", Description = "Un rongeur rapide et agressif.", Weight = 3.5, Height = 0.3, IsCaptured = false, ImagePath = ImagesFolderPath+"rattata.png", Region = "Kanto", Weakness = "Combat" },
-new Pokemon { ID = 7, Name = "Sabelette", Type = "Sol", Description = "Il s'enroule pour se protéger.", Weight = 12.0, Height = 0.6, IsCaptured = false, ImagePath = ImagesFolderPath+"sabelette.png", Region = "Kanto", Weakness = "Eau" },
-new Pokemon { ID = 8, Name = "Goupix", Type = "Feu", Description = "Sa queue s'illumine lorsqu'il est heureux.", Weight = 9.9, Height = 0.6, IsCaptured = true, ImagePath = ImagesFolderPath+"goupix.png", Region = "Kanto", Weakness = "Eau" },
-new Pokemon { ID = 9, Name = "Mélofée", Type = "Fée", Description = "Il danse à la lumière de la lune.", Weight = 7.5, Height = 0.6, IsCaptured = false, ImagePath = ImagesFolderPath+"melofee.png", Region = "Kanto", Weakness = "Acier" },
-new Pokemon { ID = 10, Name = "Paras", Type = "Insecte", Description = "Il transporte des spores sur son dos.", Weight = 5.4, Height = 0.3, IsCaptured = true, ImagePath = ImagesFolderPath+"paras.png", Region = "Kanto", Weakness = "Vol" },
-new Pokemon { ID = 11, Name = "Mimitoss", Type = "Insecte", Description = "Ses yeux brillants sont fascinants.", Weight = 30.0, Height = 1.0, IsCaptured = false, ImagePath = ImagesFolderPath+"mimitoss.png", Region = "Kanto", Weakness = "Feu" },
-new Pokemon { ID = 12, Name = "Tentacool", Type = "Eau", Description = "Un Pokémon marin avec des tentacules venimeux.", Weight = 45.5, Height = 0.9, IsCaptured = false, ImagePath = ImagesFolderPath+"tentacool.png", Region = "Kanto", Weakness = "Électrique" },
-new Pokemon { ID = 13, Name = "Ponyta", Type = "Feu", Description = "Ses flammes ne brûlent que s'il est en danger.", Weight = 30.0, Height = 1.0, IsCaptured = true, ImagePath = ImagesFolderPath+"ponyta.png", Region = "Kanto", Weakness = "Eau" },
-new Pokemon { ID = 14, Name = "Magnéti", Type = "Électrique", Description = "Il génère des champs magnétiques puissants.", Weight = 6.0, Height = 0.3, IsCaptured = false, ImagePath = ImagesFolderPath+"magneti.png", Region = "Kanto", Weakness = "Sol" },
-new Pokemon { ID = 15, Name = "Onix", Type = "Roche", Description = "Un énorme serpent de pierre.", Weight = 210.0, Height = 8.8, IsCaptured = true, ImagePath = ImagesFolderPath + "onix.png", Region = "Kanto", Weakness = "Eau" },
-new Pokemon { ID = 16, Name = "Fantominus", Type = "Spectre", Description = "Un Pokémon gaz qui peut traverser les murs.", Weight = 0.1, Height = 1.3, IsCaptured = false, ImagePath = ImagesFolderPath + "fantominus.png", Region = "Kanto", Weakness = "Ténèbres" },
-new Pokemon { ID = 17, Name = "Kranidos", Type = "Roche", Description = "Un dinosaure avec une tête dure comme le roc.", Weight = 37.0, Height = 0.9, IsCaptured = false, ImagePath = ImagesFolderPath + "kranidos.png", Region = "Sinnoh", Weakness = "Eau" },
-new Pokemon { ID = 18, Name = "Évoli", Type = "Normal", Description = "Il peut évoluer sous différentes formes.", Weight = 6.5, Height = 0.3, IsCaptured = true, ImagePath = ImagesFolderPath + "evoli.png", Region = "Kanto", Weakness = "Combat" },
-new Pokemon { ID = 19, Name = "Lixy", Type = "Électrique", Description = "Un lionceau qui émet des étincelles.", Weight = 9.5, Height = 0.5, IsCaptured = false, ImagePath = ImagesFolderPath + "lixy.png", Region = "Sinnoh", Weakness = "Sol" },
-new Pokemon { ID = 20, Name = "Cerfrousse", Type = "Normal", Description = "Il ressemble à un cerf majestueux.", Weight = 71.2, Height = 1.4, IsCaptured = true, ImagePath = ImagesFolderPath + "cerfrousse.png", Region = "Johto", Weakness = "Combat" },
-new Pokemon { ID = 21, Name = "Azurill", Type = "Eau", Description = "Un petit Pokémon qui joue avec sa queue flottante.", Weight = 2.0, Height = 0.2, IsCaptured = false, ImagePath = ImagesFolderPath + "azurill.png", Region = "Hoenn", Weakness = "Plante" },
-new Pokemon { ID = 22, Name = "Tiplouf", Type = "Eau", Description = "Un pingouin élégant et courageux.", Weight = 5.2, Height = 0.4, IsCaptured = true, ImagePath = ImagesFolderPath + "tiplouf.png", Region = "Sinnoh", Weakness = "Plante" },
-new Pokemon { ID = 23, Name = "Lucario", Type = "Combat", Description = "Il ressent les auras des êtres vivants.", Weight = 54.0, Height = 1.2, IsCaptured = false, ImagePath = ImagesFolderPath + "lucario.png", Region = "Sinnoh", Weakness = "Psy" },
-new Pokemon { ID = 24, Name = "Draco", Type = "Dragon", Description = "Un Pokémon dragon au corps élégant.", Weight = 16.5, Height = 4.0, IsCaptured = true, ImagePath = ImagesFolderPath + "draco.png", Region = "Kanto", Weakness = "Glace" },
-new Pokemon { ID = 25, Name = "Tortipouss", Type = "Plante", Description = "Il porte une petite pousse sur sa tête.", Weight = 10.2, Height = 0.4, IsCaptured = false, ImagePath = ImagesFolderPath + "tortipouss.png", Region = "Sinnoh", Weakness = "Feu" },
-new Pokemon { ID = 26, Name = "Arcko", Type = "Plante", Description = "Un Pokémon agile et vif.", Weight = 5.0, Height = 0.5, IsCaptured = true, ImagePath = ImagesFolderPath + "arcko.png", Region = "Hoenn", Weakness = "Feu" },
-new Pokemon { ID = 27, Name = "Balignon", Type = "Plante", Description = "Il ressemble à un champignon.", Weight = 4.5, Height = 0.3, IsCaptured = false, ImagePath = ImagesFolderPath + "balignon.png", Region = "Hoenn", Weakness = "Feu" },
-new Pokemon { ID = 28, Name = "Pachirisu", Type = "Électrique", Description = "Un écureuil électrique rapide.", Weight = 3.9, Height = 0.4, IsCaptured = true, ImagePath = ImagesFolderPath + "pachirisu.png", Region = "Sinnoh", Weakness = "Sol" },
-new Pokemon { ID = 29, Name = "Démanta", Type = "Eau", Description = "Un Pokémon marin qui glisse sur l'eau.", Weight = 220.0, Height = 2.1, IsCaptured = false, ImagePath = ImagesFolderPath + "demanta.png", Region = "Johto", Weakness = "Électrique" },
-new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gardien de l'équilibre écologique.", Weight = 305.0, Height = 5.0, IsCaptured = true, ImagePath = ImagesFolderPath + "zygarde.png", Region = "Kalos", Weakness = "Fée" },
+  new Pokemon { ID = 1, Name = "Bulbizarre", Type = "Plante", Description = "Un Pokémon graine qui aime le soleil.", Weight = 6.9, Height = 0.7, IsCaptured = true, ImagePath = ImagesFolderPath+"bulbizarre.png", Region = "Kanto", Weakness = "Feu", CanEvolve = true },
+new Pokemon { ID = 2, Name = "Salamèche", Type = "Feu", Description = "Sa queue brûle en permanence.", Weight = 8.5, Height = 0.6, IsCaptured = false, ImagePath = ImagesFolderPath+"salameche.png", Region = "Kanto", Weakness = "Eau", CanEvolve = true },
+new Pokemon { ID = 3, Name = "Carapuce", Type = "Eau", Description = "Sa carapace le protège des attaques.", Weight = 9.0, Height = 0.5, IsCaptured = true, ImagePath = ImagesFolderPath+"carapuce.png", Region = "Kanto", Weakness = "Plante", CanEvolve = true },
+new Pokemon { ID = 4, Name = "Pikachu", Type = "Électrique", Description = "Un Pokémon très populaire qui stocke l'électricité dans ses joues.", Weight = 6.0, Height = 0.4, IsCaptured = false, ImagePath = ImagesFolderPath+"pikachu.png", Region = "Kanto", Weakness = "Sol", CanEvolve = true },
+new Pokemon { ID = 5, Name = "Roucool", Type = "Vol", Description = "Il est souvent trouvé dans les champs et forêts.", Weight = 1.8, Height = 0.3, IsCaptured = true, ImagePath = ImagesFolderPath+"roucool.png", Region = "Kanto", Weakness = "Électrique", CanEvolve = true },
+new Pokemon { ID = 6, Name = "Rattata", Type = "Normal", Description = "Un rongeur rapide et agressif.", Weight = 3.5, Height = 0.3, IsCaptured = false, ImagePath = ImagesFolderPath+"rattata.png", Region = "Kanto", Weakness = "Combat", CanEvolve = true },
+new Pokemon { ID = 7, Name = "Sabelette", Type = "Sol", Description = "Il s'enroule pour se protéger.", Weight = 12.0, Height = 0.6, IsCaptured = false, ImagePath = ImagesFolderPath+"sabelette.png", Region = "Kanto", Weakness = "Eau", CanEvolve = true },
+new Pokemon { ID = 8, Name = "Goupix", Type = "Feu", Description = "Sa queue s'illumine lorsqu'il est heureux.", Weight = 9.9, Height = 0.6, IsCaptured = true, ImagePath = ImagesFolderPath+"goupix.png", Region = "Kanto", Weakness = "Eau", CanEvolve = true },
+new Pokemon { ID = 9, Name = "Mélofée", Type = "Fée", Description = "Il danse à la lumière de la lune.", Weight = 7.5, Height = 0.6, IsCaptured = false, ImagePath = ImagesFolderPath+"melofee.png", Region = "Kanto", Weakness = "Acier", CanEvolve = true },
+new Pokemon { ID = 10, Name = "Paras", Type = "Insecte", Description = "Il transporte des spores sur son dos.", Weight = 5.4, Height = 0.3, IsCaptured = true, ImagePath = ImagesFolderPath+"paras.png", Region = "Kanto", Weakness = "Vol", CanEvolve = true },
+new Pokemon { ID = 11, Name = "Mimitoss", Type = "Insecte", Description = "Ses yeux brillants sont fascinants.", Weight = 30.0, Height = 1.0, IsCaptured = false, ImagePath = ImagesFolderPath+"mimitoss.png", Region = "Kanto", Weakness = "Feu", CanEvolve = true },
+new Pokemon { ID = 12, Name = "Tentacool", Type = "Eau", Description = "Un Pokémon marin avec des tentacules venimeux.", Weight = 45.5, Height = 0.9, IsCaptured = false, ImagePath = ImagesFolderPath+"tentacool.png", Region = "Kanto", Weakness = "Électrique", CanEvolve = true },
+new Pokemon { ID = 13, Name = "Ponyta", Type = "Feu", Description = "Ses flammes ne brûlent que s'il est en danger.", Weight = 30.0, Height = 1.0, IsCaptured = true, ImagePath = ImagesFolderPath+"ponyta.png", Region = "Kanto", Weakness = "Eau", CanEvolve = true },
+new Pokemon { ID = 14, Name = "Magnéti", Type = "Électrique", Description = "Il génère des champs magnétiques puissants.", Weight = 6.0, Height = 0.3, IsCaptured = false, ImagePath = ImagesFolderPath+"magneti.png", Region = "Kanto", Weakness = "Sol", CanEvolve = true },
+new Pokemon { ID = 15, Name = "Onix", Type = "Roche", Description = "Un énorme serpent de pierre.", Weight = 210.0, Height = 8.8, IsCaptured = true, ImagePath = ImagesFolderPath + "onix.png", Region = "Kanto", Weakness = "Eau", CanEvolve = true },
+new Pokemon { ID = 16, Name = "Fantominus", Type = "Spectre", Description = "Un Pokémon gaz qui peut traverser les murs.", Weight = 0.1, Height = 1.3, IsCaptured = false, ImagePath = ImagesFolderPath + "fantominus.png", Region = "Kanto", Weakness = "Ténèbres", CanEvolve = true },
+new Pokemon { ID = 17, Name = "Kranidos", Type = "Roche", Description = "Un dinosaure avec une tête dure comme le roc.", Weight = 37.0, Height = 0.9, IsCaptured = false, ImagePath = ImagesFolderPath + "kranidos.png", Region = "Sinnoh", Weakness = "Eau", CanEvolve = true },
+new Pokemon { ID = 18, Name = "Évoli", Type = "Normal", Description = "Il peut évoluer sous différentes formes.", Weight = 6.5, Height = 0.3, IsCaptured = true, ImagePath = ImagesFolderPath + "evoli.png", Region = "Kanto", Weakness = "Combat", CanEvolve = true },
+new Pokemon { ID = 19, Name = "Lixy", Type = "Électrique", Description = "Un lionceau qui émet des étincelles.", Weight = 9.5, Height = 0.5, IsCaptured = false, ImagePath = ImagesFolderPath + "lixy.png", Region = "Sinnoh", Weakness = "Sol", CanEvolve = true },
+new Pokemon { ID = 20, Name = "Cerfrousse", Type = "Normal", Description = "Il ressemble à un cerf majestueux.", Weight = 71.2, Height = 1.4, IsCaptured = true, ImagePath = ImagesFolderPath + "cerfrousse.png", Region = "Johto", Weakness = "Combat", CanEvolve = false },
+new Pokemon { ID = 21, Name = "Azurill", Type = "Eau", Description = "Un petit Pokémon qui joue avec sa queue flottante.", Weight = 2.0, Height = 0.2, IsCaptured = false, ImagePath = ImagesFolderPath + "azurill.png", Region = "Hoenn", Weakness = "Plante", CanEvolve = true },
+new Pokemon { ID = 22, Name = "Tiplouf", Type = "Eau", Description = "Un pingouin élégant et courageux.", Weight = 5.2, Height = 0.4, IsCaptured = true, ImagePath = ImagesFolderPath + "tiplouf.png", Region = "Sinnoh", Weakness = "Plante", CanEvolve = true },
+new Pokemon { ID = 23, Name = "Lucario", Type = "Combat", Description = "Il ressent les auras des êtres vivants.", Weight = 54.0, Height = 1.2, IsCaptured = false, ImagePath = ImagesFolderPath + "lucario.png", Region = "Sinnoh", Weakness = "Psy", CanEvolve = false },
+new Pokemon { ID = 24, Name = "Draco", Type = "Dragon", Description = "Un Pokémon dragon au corps élégant.", Weight = 16.5, Height = 4.0, IsCaptured = true, ImagePath = ImagesFolderPath + "draco.png", Region = "Kanto", Weakness = "Glace", CanEvolve = true },
+new Pokemon { ID = 25, Name = "Tortipouss", Type = "Plante", Description = "Il porte une petite pousse sur sa tête.", Weight = 10.2, Height = 0.4, IsCaptured = false, ImagePath = ImagesFolderPath + "tortipouss.png", Region = "Sinnoh", Weakness = "Feu", CanEvolve = true },
+new Pokemon { ID = 26, Name = "Arcko", Type = "Plante", Description = "Un Pokémon agile et vif.", Weight = 5.0, Height = 0.5, IsCaptured = true, ImagePath = ImagesFolderPath + "arcko.png", Region = "Hoenn", Weakness = "Feu", CanEvolve = true },
+new Pokemon { ID = 27, Name = "Balignon", Type = "Plante", Description = "Il ressemble à un champignon.", Weight = 4.5, Height = 0.3, IsCaptured = false, ImagePath = ImagesFolderPath + "balignon.png", Region = "Hoenn", Weakness = "Feu", CanEvolve = true },
+new Pokemon { ID = 28, Name = "Pachirisu", Type = "Électrique", Description = "Un écureuil électrique rapide.", Weight = 3.9, Height = 0.4, IsCaptured = true, ImagePath = ImagesFolderPath + "pachirisu.png", Region = "Sinnoh", Weakness = "Sol", CanEvolve = false },
+new Pokemon { ID = 29, Name = "Démanta", Type = "Eau", Description = "Un Pokémon marin qui glisse sur l'eau.", Weight = 220.0, Height = 2.1, IsCaptured = false, ImagePath = ImagesFolderPath + "demanta.png", Region = "Johto", Weakness = "Électrique", CanEvolve = false },
+new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gardien de l'équilibre écologique.", Weight = 305.0, Height = 5.0, IsCaptured = true, ImagePath = ImagesFolderPath + "zygarde.png", Region = "Kalos", Weakness = "Fée", CanEvolve = false }
+
                 };
             InitializeComponent();
 
@@ -88,6 +89,7 @@ new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gard
                 Weight = double.Parse(txtWeight.Text),
                 Height = double.Parse(txtHeight.Text),
                 IsCaptured = chkCaptured.Checked,
+                CanEvolve = chkEvolve.Checked,
                 ImagePath = txtImagePath.Text,
                 Region = cmbRegion.SelectedItem.ToString(),
                 Weakness = cmbWeak.SelectedItem.ToString()
@@ -147,6 +149,7 @@ new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gard
                     selectedPokemon.Weight = double.Parse(txtWeight.Text);
                     selectedPokemon.Height = double.Parse(txtHeight.Text);
                     selectedPokemon.IsCaptured = chkCaptured.Checked;
+                    selectedPokemon.CanEvolve = chkEvolve.Checked;
                     selectedPokemon.ImagePath = txtImagePath.Text;
                     selectedPokemon.Region = cmbRegion.Text;
                     selectedPokemon.Weakness = cmbWeak.Text;
@@ -173,6 +176,7 @@ new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gard
                 txtWeight.Text = selectedPokemon.Weight.ToString();
                 txtHeight.Text = selectedPokemon.Height.ToString();
                 chkCaptured.Checked = selectedPokemon.IsCaptured;
+                chkEvolve.Checked = selectedPokemon.CanEvolve;
                 txtImagePath.Text = selectedPokemon.ImagePath;
                 cmbRegion.SelectedItem = selectedPokemon.Region;
                 cmbWeak.SelectedItem = selectedPokemon.Weakness;
@@ -217,6 +221,7 @@ new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gard
             txtWeight.Text = "";
             txtHeight.Text = "";
             chkCaptured.Checked = false;
+            chkEvolve.Checked = false;
             txtImagePath.Text = "";
             pictureBoxPokemon.ImageLocation = null;
         }

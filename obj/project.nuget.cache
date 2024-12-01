@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oEJr2mSAanY=",
+  "dgSpecHash": "f9gW8CrArqs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sylux\\source\\repos\\PokedexApp\\PokedexApp\\PokedexApp.csproj",
+  "projectFilePath": "C:\\Users\\pablo\\source\\repos\\pokedex\\PokedexApp.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\sylux\\source\\repos\\PokedexApp\\PokedexApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
