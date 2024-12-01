@@ -46,13 +46,15 @@ namespace PokedexApp
             txtImagePath = new TextBox();
             pictureBox1 = new PictureBox();
             groupBox1 = new GroupBox();
+            chkEvolve = new CheckBox();
             cmbWeak = new ComboBox();
             labelWeakness = new Label();
             btnSearchByRegion = new Button();
             RegionLabel = new Label();
             cmbRegion = new ComboBox();
             txtDescription = new RichTextBox();
-            chkEvolve = new CheckBox();
+            textAtqS = new TextBox();
+            labelAtq = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPokemon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
@@ -209,6 +211,8 @@ namespace PokedexApp
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(labelAtq);
+            groupBox1.Controls.Add(textAtqS);
             groupBox1.Controls.Add(chkEvolve);
             groupBox1.Controls.Add(cmbWeak);
             groupBox1.Controls.Add(labelWeakness);
@@ -235,6 +239,19 @@ namespace PokedexApp
             groupBox1.Size = new Size(414, 487);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
+            // 
+            // chkEvolve
+            // 
+            chkEvolve.AutoSize = true;
+            chkEvolve.BackColor = Color.Transparent;
+            chkEvolve.BackgroundImageLayout = ImageLayout.None;
+            chkEvolve.FlatStyle = FlatStyle.System;
+            chkEvolve.Location = new Point(168, 189);
+            chkEvolve.Name = "chkEvolve";
+            chkEvolve.Size = new Size(121, 25);
+            chkEvolve.TabIndex = 20;
+            chkEvolve.Text = "Peut évoluer";
+            chkEvolve.UseVisualStyleBackColor = false;
             // 
             // cmbWeak
             // 
@@ -288,22 +305,27 @@ namespace PokedexApp
             txtDescription.BorderStyle = BorderStyle.None;
             txtDescription.Location = new Point(14, 217);
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(385, 80);
+            txtDescription.Size = new Size(385, 55);
             txtDescription.TabIndex = 14;
             txtDescription.Text = "Description";
             // 
-            // chkEvolve
+            // textAtqS
             // 
-            chkEvolve.AutoSize = true;
-            chkEvolve.BackColor = Color.Transparent;
-            chkEvolve.BackgroundImageLayout = ImageLayout.None;
-            chkEvolve.FlatStyle = FlatStyle.System;
-            chkEvolve.Location = new Point(168, 189);
-            chkEvolve.Name = "chkEvolve";
-            chkEvolve.Size = new Size(121, 25);
-            chkEvolve.TabIndex = 20;
-            chkEvolve.Text = "Peut évoluer";
-            chkEvolve.UseVisualStyleBackColor = false;
+            textAtqS.BorderStyle = BorderStyle.None;
+            textAtqS.Location = new Point(215, 278);
+            textAtqS.Name = "textAtqS";
+            textAtqS.PlaceholderText = "Attaque signature";
+            textAtqS.Size = new Size(152, 20);
+            textAtqS.TabIndex = 22;
+            // 
+            // labelAtq
+            // 
+            labelAtq.AutoSize = true;
+            labelAtq.Location = new Point(26, 278);
+            labelAtq.Name = "labelAtq";
+            labelAtq.Size = new Size(134, 20);
+            labelAtq.TabIndex = 23;
+            labelAtq.Text = "Attaque signature :";
             // 
             // Form1
             // 
@@ -351,5 +373,7 @@ namespace PokedexApp
         private ComboBox cmbWeak;
         private Label labelWeakness;
         private CheckBox chkEvolve;
+        private TextBox textAtqS;
+        private Label labelAtq;
     }
 }
