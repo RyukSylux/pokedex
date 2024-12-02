@@ -63,6 +63,16 @@ namespace PokedexApp.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap combat_tile {
+            get {
+                object obj = ResourceManager.GetObject("combat tile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap emptyTile {
             get {
                 object obj = ResourceManager.GetObject("emptyTile", resourceCulture);

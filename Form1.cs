@@ -11,7 +11,7 @@ namespace PokedexApp
     public partial class Form1 : Form
     {
         private List<Pokemon> pokemons = new List<Pokemon>();
-        private int nextId = 1; // Pour auto-incrémenter les IDs
+        private int nextId = 31; // Pour auto-incrémenter les IDs
         private static readonly string ImagesFolderPath = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, "images\\");
 
 
