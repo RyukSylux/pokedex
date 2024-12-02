@@ -46,23 +46,26 @@ namespace PokedexApp
             txtImagePath = new TextBox();
             pictureBox1 = new PictureBox();
             groupBox1 = new GroupBox();
+            label1 = new Label();
+            pictureBox2 = new PictureBox();
             labelAtq = new Label();
             textAtqS = new TextBox();
             chkEvolve = new CheckBox();
             cmbWeak = new ComboBox();
             labelWeakness = new Label();
-            btnSearchByRegion = new Button();
             RegionLabel = new Label();
             cmbRegion = new ComboBox();
             txtDescription = new RichTextBox();
+            btnSearchByRegion = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPokemon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // buttonSearchName
             // 
-            buttonSearchName.Location = new Point(224, 313);
+            buttonSearchName.Location = new Point(154, 471);
             buttonSearchName.Margin = new Padding(3, 2, 3, 2);
             buttonSearchName.Name = "buttonSearchName";
             buttonSearchName.Size = new Size(137, 23);
@@ -73,7 +76,7 @@ namespace PokedexApp
             // 
             // btnSearchByType
             // 
-            btnSearchByType.Location = new Point(224, 285);
+            btnSearchByType.Location = new Point(273, 443);
             btnSearchByType.Margin = new Padding(3, 2, 3, 2);
             btnSearchByType.Name = "btnSearchByType";
             btnSearchByType.Size = new Size(137, 24);
@@ -94,7 +97,7 @@ namespace PokedexApp
             // 
             // btnList
             // 
-            btnList.Location = new Point(3, 312);
+            btnList.Location = new Point(38, 443);
             btnList.Margin = new Padding(3, 2, 3, 2);
             btnList.Name = "btnList";
             btnList.Size = new Size(159, 24);
@@ -106,7 +109,7 @@ namespace PokedexApp
             // btnEdit
             // 
             btnEdit.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnEdit.Location = new Point(137, 261);
+            btnEdit.Location = new Point(187, 413);
             btnEdit.Margin = new Padding(3, 2, 3, 2);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(66, 24);
@@ -117,7 +120,7 @@ namespace PokedexApp
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(284, 261);
+            btnDelete.Location = new Point(333, 413);
             btnDelete.Margin = new Padding(3, 2, 3, 2);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(77, 24);
@@ -128,7 +131,7 @@ namespace PokedexApp
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(3, 261);
+            btnAdd.Location = new Point(38, 413);
             btnAdd.Margin = new Padding(3, 2, 3, 2);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(66, 24);
@@ -190,7 +193,7 @@ namespace PokedexApp
             listBoxPokemons.Location = new Point(38, 150);
             listBoxPokemons.Margin = new Padding(3, 2, 3, 2);
             listBoxPokemons.Name = "listBoxPokemons";
-            listBoxPokemons.Size = new Size(372, 319);
+            listBoxPokemons.Size = new Size(372, 259);
             listBoxPokemons.TabIndex = 1;
             listBoxPokemons.SelectedIndexChanged += listBoxPokemons_SelectedIndexChanged;
             // 
@@ -227,27 +230,22 @@ namespace PokedexApp
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(pictureBox2);
             groupBox1.Controls.Add(labelAtq);
             groupBox1.Controls.Add(textAtqS);
             groupBox1.Controls.Add(chkEvolve);
             groupBox1.Controls.Add(cmbWeak);
             groupBox1.Controls.Add(labelWeakness);
-            groupBox1.Controls.Add(btnSearchByRegion);
             groupBox1.Controls.Add(RegionLabel);
             groupBox1.Controls.Add(cmbRegion);
             groupBox1.Controls.Add(txtDescription);
             groupBox1.Controls.Add(pictureBoxPokemon);
-            groupBox1.Controls.Add(btnSearchByType);
-            groupBox1.Controls.Add(buttonSearchName);
             groupBox1.Controls.Add(cmbType);
             groupBox1.Controls.Add(txtImagePath);
             groupBox1.Controls.Add(txtName);
-            groupBox1.Controls.Add(btnList);
             groupBox1.Controls.Add(txtHeight);
-            groupBox1.Controls.Add(btnDelete);
-            groupBox1.Controls.Add(btnEdit);
             groupBox1.Controls.Add(txtWeight);
-            groupBox1.Controls.Add(btnAdd);
             groupBox1.Controls.Add(chkCaptured);
             groupBox1.Controls.Add(pictureBox1);
             groupBox1.Location = new Point(524, 150);
@@ -257,6 +255,25 @@ namespace PokedexApp
             groupBox1.Size = new Size(362, 365);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(3, 259);
+            label1.Name = "label1";
+            label1.Size = new Size(60, 15);
+            label1.TabIndex = 25;
+            label1.Text = "Attaques :";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.combat_tile;
+            pictureBox2.Location = new Point(0, 276);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(362, 89);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 24;
+            pictureBox2.TabStop = false;
             // 
             // labelAtq
             // 
@@ -308,17 +325,6 @@ namespace PokedexApp
             labelWeakness.TabIndex = 18;
             labelWeakness.Text = "Faiblesse :";
             // 
-            // btnSearchByRegion
-            // 
-            btnSearchByRegion.Location = new Point(224, 338);
-            btnSearchByRegion.Margin = new Padding(3, 2, 3, 2);
-            btnSearchByRegion.Name = "btnSearchByRegion";
-            btnSearchByRegion.Size = new Size(137, 23);
-            btnSearchByRegion.TabIndex = 17;
-            btnSearchByRegion.Text = "Recher par Région";
-            btnSearchByRegion.UseVisualStyleBackColor = true;
-            btnSearchByRegion.Click += btnSearchByRegion_Click;
-            // 
             // RegionLabel
             // 
             RegionLabel.AutoSize = true;
@@ -344,9 +350,20 @@ namespace PokedexApp
             txtDescription.Location = new Point(13, 193);
             txtDescription.Margin = new Padding(3, 2, 3, 2);
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(338, 44);
+            txtDescription.Size = new Size(338, 53);
             txtDescription.TabIndex = 14;
             txtDescription.Text = "Description";
+            // 
+            // btnSearchByRegion
+            // 
+            btnSearchByRegion.Location = new Point(154, 495);
+            btnSearchByRegion.Margin = new Padding(3, 2, 3, 2);
+            btnSearchByRegion.Name = "btnSearchByRegion";
+            btnSearchByRegion.Size = new Size(137, 23);
+            btnSearchByRegion.TabIndex = 17;
+            btnSearchByRegion.Text = "Rechercher par Région";
+            btnSearchByRegion.UseVisualStyleBackColor = true;
+            btnSearchByRegion.Click += btnSearchByRegion_Click;
             // 
             // Form1
             // 
@@ -357,6 +374,13 @@ namespace PokedexApp
             ClientSize = new Size(911, 575);
             Controls.Add(listBoxPokemons);
             Controls.Add(groupBox1);
+            Controls.Add(buttonSearchName);
+            Controls.Add(btnAdd);
+            Controls.Add(btnEdit);
+            Controls.Add(btnSearchByRegion);
+            Controls.Add(btnDelete);
+            Controls.Add(btnList);
+            Controls.Add(btnSearchByType);
             DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
@@ -368,6 +392,7 @@ namespace PokedexApp
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -397,5 +422,7 @@ namespace PokedexApp
         private CheckBox chkEvolve;
         private TextBox textAtqS;
         private Label labelAtq;
+        private PictureBox pictureBox2;
+        private Label label1;
     }
 }
