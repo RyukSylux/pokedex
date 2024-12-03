@@ -57,6 +57,10 @@ namespace PokedexApp
             cmbRegion = new ComboBox();
             txtDescription = new RichTextBox();
             btnSearchByRegion = new Button();
+            comboBoxAttck1 = new ComboBox();
+            comboBoxAttck2 = new ComboBox();
+            comboBoxAttck3 = new ComboBox();
+            comboBoxAttck4 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPokemon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
@@ -230,6 +234,10 @@ namespace PokedexApp
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(comboBoxAttck4);
+            groupBox1.Controls.Add(comboBoxAttck3);
+            groupBox1.Controls.Add(comboBoxAttck2);
+            groupBox1.Controls.Add(comboBoxAttck1);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(pictureBox2);
             groupBox1.Controls.Add(labelAtq);
@@ -365,6 +373,38 @@ namespace PokedexApp
             btnSearchByRegion.UseVisualStyleBackColor = true;
             btnSearchByRegion.Click += btnSearchByRegion_Click;
             // 
+            // comboBoxAttck1
+            // 
+            comboBoxAttck1.FormattingEnabled = true;
+            comboBoxAttck1.Location = new Point(13, 293);
+            comboBoxAttck1.Name = "comboBoxAttck1";
+            comboBoxAttck1.Size = new Size(121, 23);
+            comboBoxAttck1.TabIndex = 26;
+            // 
+            // comboBoxAttck2
+            // 
+            comboBoxAttck2.FormattingEnabled = true;
+            comboBoxAttck2.Location = new Point(219, 293);
+            comboBoxAttck2.Name = "comboBoxAttck2";
+            comboBoxAttck2.Size = new Size(121, 23);
+            comboBoxAttck2.TabIndex = 27;
+            // 
+            // comboBoxAttck3
+            // 
+            comboBoxAttck3.FormattingEnabled = true;
+            comboBoxAttck3.Location = new Point(219, 334);
+            comboBoxAttck3.Name = "comboBoxAttck3";
+            comboBoxAttck3.Size = new Size(121, 23);
+            comboBoxAttck3.TabIndex = 28;
+            // 
+            // comboBoxAttck4
+            // 
+            comboBoxAttck4.FormattingEnabled = true;
+            comboBoxAttck4.Location = new Point(13, 334);
+            comboBoxAttck4.Name = "comboBoxAttck4";
+            comboBoxAttck4.Size = new Size(121, 23);
+            comboBoxAttck4.TabIndex = 29;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -424,5 +464,9 @@ namespace PokedexApp
         private Label labelAtq;
         private PictureBox pictureBox2;
         private Label label1;
+        private ComboBox comboBoxAttck4;
+        private ComboBox comboBoxAttck3;
+        private ComboBox comboBoxAttck2;
+        private ComboBox comboBoxAttck1;
     }
 }
