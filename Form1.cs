@@ -14,6 +14,77 @@ namespace PokedexApp
         private int nextId = 31; // Pour auto-incrémenter les IDs
         private static readonly string ImagesFolderPath = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, "images\\");
 
+        // Liste des attaques disponibles
+        List<string> allAttacks = new List<string>
+            {
+                "-",
+                // type psy tmts
+                "Ultrason",
+                // attaques acier
+                "Griffe Acier",
+                // Attaques normales
+                "Charge", "Vive-Attaque", "Damoclès", "Météores", "Poursuite", "Rugissement", "Combo-Griffe", "Coup d'Boule", "Griffe", "Écrasement",
+
+                // Attaques de type Feu
+                "Flammèche", "Lance-Flammes", "Danse-Flamme", "Déflagration", "Nitrocharge", "Feu Follet", "Surchauffe", "Poing de Feu", "Boutefeu", "Vortex Magma",
+
+                // Attaques de type Eau
+                "Pistolet à O", "Surf", "Hydrocanon", "Cascade", "Ébullition", "Plongée", "Bulles d’O", "Danse Pluie", "Ocroupi", "Hydroqueue", "Rafale Hydro",
+
+                // Attaques de type Plante
+                "Fouet Lianes", "Canon Graine", "Tranch'Herbe", "Lance-Soleil", "Synthèse", "Vampigraine", "Méga-Sangsue", "Tempêteverte", "Noeud Herbe", "Feuillemagik",
+
+                // Attaques de type Électrique
+                "Éclair", "Fatal-Foudre", "Cage-Éclair", "Tonnerre", "Crocs Éclair", "Étincelle", "ChangeÉclair", "Parabocharge", "Électacle", "Tonnerre Charge",
+
+                // Attaques de type Roche
+                "Jet-Pierres", "Éboulement", "Lame de Roc", "Pouvoir Antique", "Piège de Roc", "Tacle Lourd", "Force Naturelle", "Tomberoche", "Roulade", "Hurlement",
+
+                // Attaques de type Sol
+                "Jet de Sable", "Séisme", "Tunnel", "Coud’Boue", "Piège de Sable", "Ampleur", "Telluriforce", "Tourbi-Sable", "Piétisol", "Abîme",
+
+                // Attaques de type Insecte
+                "Armure", "Dard-Venin", "Bourdon", "Vent Argenté", "Piqûre", "Coupe", "Plaie Croix", "Survinsecte", "Picore", "Demi-Tour",
+
+                // Attaques de type Vol
+                "Tornade", "Hâte", "Cru-Aile", "Aéropique", "Rapace", "Atterrissage", "Cyclone", "Vent Arrière", "Lame d’Air", "Hurle-Temps",
+
+                // Attaques de type Combat
+                "Balayette", "Poing-Karaté", "Close Combat", "Mitra-Poing", "Poing-Boost", "Mach Punch", "Coup-Croix", "Choc Météore", "Dynamopoing", "Riposte",
+
+                // Attaques de type Fée
+                "Charme", "Câlinerie", "Pouvoir Lunaire", "Voeu Soin", "Vague Psy", "Lumi-Éclat", "Vent Féérique", "Rune Protect", "Danse-Lune", "Écras’Face",
+
+                // Attaques de type Spectre
+                "Léchouille", "Ombre Portée", "Ball’Ombre", "Onde Folie", "Feu Fatu", "Ténèbres", "Spectres-Bouclier", "Ténèbrôme", "Vibrasoin", "Maléfice",
+
+                // Attaques de type Dragon
+                "Ultralaser", "Colère", "Draco-Rage", "Vibraqua", "Danse Draco", "Dracochoc", "Dracossouffle", "Hurle-Temps", "Tempêteverte", "Lance Draco",
+
+                // Attaques de type Ténèbres
+                "Morsure", "Poursuite", "Mâchouille", "Sabotage", "Provoc", "Crocs Feu", "Tricherie", "Bluff", "Coup Bas", "Sombre-Larme",
+
+                // Attaques de type Glace
+                "Poudreuse", "Laser Glace", "Blizzard", "Onde Boréale", "Vent Glacé", "Eclats Glace", "Avalanche", "Chute Glace", "Poing-Glace", "Grêle",
+
+                // Attaques de statut (multitype)
+                "Protection", "Mur Lumière", "Clonage", "Hypnose", "Provoc", "Boost", "Reflet", "Regard Noir", "Grincement", "Berceuse", "Téléport",
+                // Attaques des Pokémon
+                "Éboulement", "Coup d'Main", "Roulade", "Séisme", // Kranidos
+                "Morsure", "Tacle", "Mimi-Queue", "Hâte", // Évoli
+                "Crocs Éclair", "Griffe", "Vive-Attaque", "Tonnerre", // Lixy
+                "Psyko", "Doux Baiser", "Méditation", "Soin", // Cerfrousse
+                "Éclaboussure", "Barrage", "Aqua Jet", "Hydrocanon", // Azurill
+                "Pistolet à O", "Rafale Hydro", "Ultrason", "Poudre Dodo", // Tiplouf
+                "Aurasphère", "Poing-Glace", "Griffe", "Coup d'Poing", // Lucario
+                "Ultralaser", "Draco-Rage", "Griffe", "Lance-Dragon", // Draco
+                "Canon Graine", "Fouet Lianes", "Dard-Venin", "Rugissement", // Tortipouss
+                "Tranch'Herbe", "Coup d'Main", "Vive-Attaque", "Rugissement", // Arcko
+                "Spore Coton", "Fouet Lianes", "Poudre Dodo", "Tranch'Herbe", // Balignon
+                "Parabocharge", "Tonnerre", "Vive-Attaque", "Queue de Fer", // Pachirisu
+                "Surf", "Barrage", "Hydrocanon", "Plongeon", // Démanta
+                "Force Chtonienne", "Draco-Queue", "Séisme", "Lance-Dragon" // Zygarde
+            };
 
         public Form1()
         {
@@ -49,8 +120,7 @@ namespace PokedexApp
                     new Pokemon { ID = 27, Name = "Balignon", Type = "Plante", Description = "Il ressemble à un champignon.", Weight = 4.5, Height = 0.3, IsCaptured = false, ImagePath = ImagesFolderPath + "balignon.png", Region = "Hoenn", Weakness = "Feu", CanEvolve = true, AtqSign = "Spore Coton", Attacks = new List<string> { "Spore Coton", "Fouet Lianes", "Poudre Dodo", "Tranch'Herbe" } },
                     new Pokemon { ID = 28, Name = "Pachirisu", Type = "Électrique", Description = "Un écureuil électrique rapide.", Weight = 3.9, Height = 0.4, IsCaptured = true, ImagePath = ImagesFolderPath + "pachirisu.png", Region = "Sinnoh", Weakness = "Sol", CanEvolve = false, AtqSign = "Parabocharge", Attacks = new List<string> { "Parabocharge", "Tonnerre", "Vive-Attaque", "Queue de Fer" } },
                     new Pokemon { ID = 29, Name = "Démanta", Type = "Eau", Description = "Un Pokémon marin qui glisse sur l'eau.", Weight = 220.0, Height = 2.1, IsCaptured = false, ImagePath = ImagesFolderPath + "demanta.png", Region = "Johto", Weakness = "Électrique", CanEvolve = false, AtqSign = "Surf", Attacks = new List<string> { "Surf", "Barrage", "Hydrocanon", "Plongeon" } },
-                    new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gardien de l'équilibre écologique.", Weight = 305.0, Height = 5.0, IsCaptured = true, ImagePath = ImagesFolderPath + "zygarde.png", Region = "Kalos", Weakness = "Fée", CanEvolve = false, AtqSign = "Force Chtonienne", Attacks = new List<string> { "Force Chtonienne", "Draco-Queue", "Séisme", "Lance-Dragon" } }
-
+                    new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gardien de l'équilibre écologique.", Weight = 305.0, Height = 5.0, IsCaptured = true, ImagePath = ImagesFolderPath + "zygarde.png", Region = "Kalos", Weakness = "Fée", CanEvolve = false, AtqSign = "Force Chtonienne", Attacks = new List<string> { "Force Chtonienne", "Draco-Queue", "Séisme", "Lance-Dragon" } }             
                 };
             InitializeComponent();
             UpdatePokemonList();
@@ -99,6 +169,13 @@ namespace PokedexApp
                         Attacks = new List<string> { comboBoxAttck1.Text, comboBoxAttck2.Text, comboBoxAttck3.Text, comboBoxAttck4.Text }
                     };
                     pokemons.Add(pokemon);
+                    allAttacks = allAttacks.Union(pokemon.Attacks).ToList();
+
+                    comboBoxAttck1.DataSource = new List<string>(allAttacks);
+                    comboBoxAttck2.DataSource = new List<string>(allAttacks);
+                    comboBoxAttck3.DataSource = new List<string>(allAttacks);
+                    comboBoxAttck4.DataSource = new List<string>(allAttacks);
+
                     UpdatePokemonList();
                     listBoxPokemons.SelectedItem = pokemon;
                 }
@@ -166,6 +243,12 @@ namespace PokedexApp
                     selectedPokemon.AtqSign = textAtqS.Text;
                     selectedPokemon.Attacks = new List<string> { comboBoxAttck1.Text, comboBoxAttck2.Text, comboBoxAttck3.Text, comboBoxAttck4.Text };
 
+                    allAttacks = allAttacks.Union(selectedPokemon.Attacks).ToList();
+
+                    comboBoxAttck1.DataSource = new List<string>(allAttacks);
+                    comboBoxAttck2.DataSource = new List<string>(allAttacks);
+                    comboBoxAttck3.DataSource = new List<string>(allAttacks);
+                    comboBoxAttck4.DataSource = new List<string>(allAttacks);
                     UpdatePokemonList();
 
                     listBoxPokemons.SelectedItem = txtName.Text;
@@ -260,77 +343,6 @@ namespace PokedexApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Liste des attaques disponibles
-            List<string> allAttacks = new List<string>
-            {
-                "-",
-                // type psy tmts
-                "Ultrason",
-                // attaques acier
-                "Griffe Acier",
-                // Attaques normales
-                "Charge", "Vive-Attaque", "Damoclès", "Météores", "Poursuite", "Rugissement", "Combo-Griffe", "Coup d'Boule", "Griffe", "Écrasement",
-
-                // Attaques de type Feu
-                "Flammèche", "Lance-Flammes", "Danse-Flamme", "Déflagration", "Nitrocharge", "Feu Follet", "Surchauffe", "Poing de Feu", "Boutefeu", "Vortex Magma",
-
-                // Attaques de type Eau
-                "Pistolet à O", "Surf", "Hydrocanon", "Cascade", "Ébullition", "Plongée", "Bulles d’O", "Danse Pluie", "Ocroupi", "Hydroqueue", "Rafale Hydro",
-
-                // Attaques de type Plante
-                "Fouet Lianes", "Canon Graine", "Tranch'Herbe", "Lance-Soleil", "Synthèse", "Vampigraine", "Méga-Sangsue", "Tempêteverte", "Noeud Herbe", "Feuillemagik",
-
-                // Attaques de type Électrique
-                "Éclair", "Fatal-Foudre", "Cage-Éclair", "Tonnerre", "Crocs Éclair", "Étincelle", "ChangeÉclair", "Parabocharge", "Électacle", "Tonnerre Charge",
-
-                // Attaques de type Roche
-                "Jet-Pierres", "Éboulement", "Lame de Roc", "Pouvoir Antique", "Piège de Roc", "Tacle Lourd", "Force Naturelle", "Tomberoche", "Roulade", "Hurlement",
-
-                // Attaques de type Sol
-                "Jet de Sable", "Séisme", "Tunnel", "Coud’Boue", "Piège de Sable", "Ampleur", "Telluriforce", "Tourbi-Sable", "Piétisol", "Abîme",
-
-                // Attaques de type Insecte
-                "Armure", "Dard-Venin", "Bourdon", "Vent Argenté", "Piqûre", "Coupe", "Plaie Croix", "Survinsecte", "Picore", "Demi-Tour",
-
-                // Attaques de type Vol
-                "Tornade", "Hâte", "Cru-Aile", "Aéropique", "Rapace", "Atterrissage", "Cyclone", "Vent Arrière", "Lame d’Air", "Hurle-Temps",
-
-                // Attaques de type Combat
-                "Balayette", "Poing-Karaté", "Close Combat", "Mitra-Poing", "Poing-Boost", "Mach Punch", "Coup-Croix", "Choc Météore", "Dynamopoing", "Riposte",
-
-                // Attaques de type Fée
-                "Charme", "Câlinerie", "Pouvoir Lunaire", "Voeu Soin", "Vague Psy", "Lumi-Éclat", "Vent Féérique", "Rune Protect", "Danse-Lune", "Écras’Face",
-
-                // Attaques de type Spectre
-                "Léchouille", "Ombre Portée", "Ball’Ombre", "Onde Folie", "Feu Fatu", "Ténèbres", "Spectres-Bouclier", "Ténèbrôme", "Vibrasoin", "Maléfice",
-
-                // Attaques de type Dragon
-                "Ultralaser", "Colère", "Draco-Rage", "Vibraqua", "Danse Draco", "Dracochoc", "Dracossouffle", "Hurle-Temps", "Tempêteverte", "Lance Draco",
-
-                // Attaques de type Ténèbres
-                "Morsure", "Poursuite", "Mâchouille", "Sabotage", "Provoc", "Crocs Feu", "Tricherie", "Bluff", "Coup Bas", "Sombre-Larme",
-
-                // Attaques de type Glace
-                "Poudreuse", "Laser Glace", "Blizzard", "Onde Boréale", "Vent Glacé", "Eclats Glace", "Avalanche", "Chute Glace", "Poing-Glace", "Grêle",
-
-                // Attaques de statut (multitype)
-                "Protection", "Mur Lumière", "Clonage", "Hypnose", "Provoc", "Boost", "Reflet", "Regard Noir", "Grincement", "Berceuse", "Téléport",
-                // Attaques des Pokémon
-                "Éboulement", "Coup d'Main", "Roulade", "Séisme", // Kranidos
-                "Morsure", "Tacle", "Mimi-Queue", "Hâte", // Évoli
-                "Crocs Éclair", "Griffe", "Vive-Attaque", "Tonnerre", // Lixy
-                "Psyko", "Doux Baiser", "Méditation", "Soin", // Cerfrousse
-                "Éclaboussure", "Barrage", "Aqua Jet", "Hydrocanon", // Azurill
-                "Pistolet à O", "Rafale Hydro", "Ultrason", "Poudre Dodo", // Tiplouf
-                "Aurasphère", "Poing-Glace", "Griffe", "Coup d'Poing", // Lucario
-                "Ultralaser", "Draco-Rage", "Griffe", "Lance-Dragon", // Draco
-                "Canon Graine", "Fouet Lianes", "Dard-Venin", "Rugissement", // Tortipouss
-                "Tranch'Herbe", "Coup d'Main", "Vive-Attaque", "Rugissement", // Arcko
-                "Spore Coton", "Fouet Lianes", "Poudre Dodo", "Tranch'Herbe", // Balignon
-                "Parabocharge", "Tonnerre", "Vive-Attaque", "Queue de Fer", // Pachirisu
-                "Surf", "Barrage", "Hydrocanon", "Plongeon", // Démanta
-                "Force Chtonienne", "Draco-Queue", "Séisme", "Lance-Dragon" // Zygarde
-            };
             cmbType.Items.AddRange(new string[]
             {
                 "Normal", "Feu", "Eau", "Plante", "Électrique", "Glace",
@@ -347,6 +359,12 @@ namespace PokedexApp
                 "Combat", "Poison", "Sol", "Vol", "Psy", "Insecte",
                 "Roche", "Spectre", "Dragon", "Ténèbres", "Acier", "Fée"
             });
+
+
+            foreach (var pokemon in pokemons)
+            {
+                allAttacks = allAttacks.Union(pokemon.Attacks).ToList();
+            }
 
             // Remplir les ComboBox avec les attaques
             comboBoxAttck1.DataSource = new List<string>(allAttacks);
