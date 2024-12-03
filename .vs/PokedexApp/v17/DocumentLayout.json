@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\",
+  "WorkspaceRootPath": "C:\\Users\\sylux\\Documents\\Trieur\\github\\test\\pokedex\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\sylux\\documents\\trieur\\github\\pokedex\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\sylux\\documents\\trieur\\github\\test\\pokedex\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|C:\\Users\\sylux\\Documents\\Trieur\\github\\test\\pokedex\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\sylux\\documents\\trieur\\github\\pokedex\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|c:\\users\\sylux\\documents\\trieur\\github\\test\\pokedex\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F249DCFC-E3C6-460A-A0D8-8E1A21926637}|PokedexApp.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -35,22 +35,22 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs [Conception]",
-              "DocumentMoniker": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Form1.cs",
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\sylux\\Documents\\Trieur\\github\\test\\pokedex\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Form1.cs [Conception]",
-              "RelativeToolTip": "Form1.cs [Conception]",
+              "ToolTip": "C:\\Users\\sylux\\Documents\\Trieur\\github\\test\\pokedex\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T15:40:27.409Z",
-              "EditorCaption": " [Conception]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\sylux\\Documents\\Trieur\\github\\test\\pokedex\\Class1.cs",
               "RelativeDocumentMoniker": "Class1.cs",
-              "ToolTip": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Class1.cs",
+              "ToolTip": "C:\\Users\\sylux\\Documents\\Trieur\\github\\test\\pokedex\\Class1.cs",
               "RelativeToolTip": "Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAmwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -60,11 +60,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\sylux\\Documents\\Trieur\\github\\test\\pokedex\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\sylux\\Documents\\Trieur\\github\\pokedex\\Form1.cs",
+              "ToolTip": "C:\\Users\\sylux\\Documents\\Trieur\\github\\test\\pokedex\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAANMBAAAAAAAAAAAYwP8BAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAHQBAAAAAAAAAAAcwFMBAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T13:50:34.66Z",
               "EditorCaption": ""

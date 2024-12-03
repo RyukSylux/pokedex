@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Drawing.Text;
 using System.Reflection;
+using System.Data;
 
 namespace PokedexApp
 {
@@ -336,7 +337,7 @@ namespace PokedexApp
         {
             txtName.Text = null;
             txtDescription.Text = null;
-            cmbType.SelectedIndex = -1;
+            cmbType.SelectedIndex = 0;
             cmbRegion.SelectedIndex = -1;
             cmbWeak.SelectedIndex = -1;
             txtWeight.Text = null;
@@ -507,14 +508,12 @@ namespace PokedexApp
 
         private void cmbType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string cbmType = cmbType.SelectedItem.ToString();
-            string imgType = ImagesFolderPath + cbmType + ".png";
+                string cbmType = cmbType.SelectedItem.ToString();
+                string imgType = ImagesFolderPath + cbmType + ".png";
                 if (!string.IsNullOrEmpty(cbmType) && System.IO.File.Exists(imgType))
                 {
                     pictureBoxType.ImageLocation = imgType;
                 }
-            
-
         }
     }
 }
