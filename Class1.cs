@@ -15,6 +15,7 @@
         public bool CanEvolve {get; set; }
         public string Weakness { get; set; }
         public string ImagePath { get; set; } // Chemin de l'image
+        
       
         public override string ToString()
         {

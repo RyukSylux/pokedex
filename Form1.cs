@@ -14,13 +14,13 @@ namespace PokedexApp
         private int nextId = 31; // Pour auto-incrémenter les IDs
         private static readonly string ImagesFolderPath = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, "images\\");
 
-
         public Form1()
         {
             // Liste de Pokémon préremplis
+
             pokemons = new List<Pokemon>
-                {
-  new Pokemon { ID = 1, Name = "Bulbizarre", Type = "Plante", Description = "Un Pokémon graine qui aime le soleil.", Weight = 6.9, Height = 0.7, IsCaptured = true, ImagePath = ImagesFolderPath + "bulbizarre.png", Region = "Kanto", Weakness = "Feu", CanEvolve = true, AtqSign = "Fouet Lianes" },
+    {
+      new Pokemon { ID = 1, Name = "Bulbizarre", Type = "Plante", Description = "Un Pokémon graine qui aime le soleil.", Weight = 6.9, Height = 0.7, IsCaptured = true, ImagePath = ImagesFolderPath + "bulbizarre.png", Region = "Kanto", Weakness = "Feu", CanEvolve = true, AtqSign = "Fouet Lianes" },
 new Pokemon { ID = 2, Name = "Salamèche", Type = "Feu", Description = "Sa queue brûle en permanence.", Weight = 8.5, Height = 0.6, IsCaptured = false, ImagePath = ImagesFolderPath + "salameche.png", Region = "Kanto", Weakness = "Eau", CanEvolve = true, AtqSign = "Flammèche" },
 new Pokemon { ID = 3, Name = "Carapuce", Type = "Eau", Description = "Sa carapace le protège des attaques.", Weight = 9.0, Height = 0.5, IsCaptured = true, ImagePath = ImagesFolderPath + "carapuce.png", Region = "Kanto", Weakness = "Plante", CanEvolve = true, AtqSign = "Pistolet à O" },
 new Pokemon { ID = 4, Name = "Pikachu", Type = "Électrique", Description = "Un Pokémon très populaire qui stocke l'électricité dans ses joues.", Weight = 6.0, Height = 0.4, IsCaptured = false, ImagePath = ImagesFolderPath + "pikachu.png", Region = "Kanto", Weakness = "Sol", CanEvolve = true, AtqSign = "Éclair" },
@@ -49,9 +49,10 @@ new Pokemon { ID = 26, Name = "Arcko", Type = "Plante", Description = "Un Pokémo
 new Pokemon { ID = 27, Name = "Balignon", Type = "Plante", Description = "Il ressemble à un champignon.", Weight = 4.5, Height = 0.3, IsCaptured = false, ImagePath = ImagesFolderPath + "balignon.png", Region = "Hoenn", Weakness = "Feu", CanEvolve = true, AtqSign = "Spore Coton" },
 new Pokemon { ID = 28, Name = "Pachirisu", Type = "Électrique", Description = "Un écureuil électrique rapide.", Weight = 3.9, Height = 0.4, IsCaptured = true, ImagePath = ImagesFolderPath + "pachirisu.png", Region = "Sinnoh", Weakness = "Sol", CanEvolve = false, AtqSign = "Parabocharge" },
 new Pokemon { ID = 29, Name = "Démanta", Type = "Eau", Description = "Un Pokémon marin qui glisse sur l'eau.", Weight = 220.0, Height = 2.1, IsCaptured = false, ImagePath = ImagesFolderPath + "demanta.png", Region = "Johto", Weakness = "Électrique", CanEvolve = false, AtqSign = "Surf" },
-new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gardien de l'équilibre écologique.", Weight = 305.0, Height = 5.0, IsCaptured = true, ImagePath = ImagesFolderPath + "zygarde.png", Region = "Kalos", Weakness = "Fée", CanEvolve = false, AtqSign = "Force Chtonienne" },
+new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gardien de l'équilibre écologique.", Weight = 305.0, Height = 5.0, IsCaptured = true, ImagePath = ImagesFolderPath + "zygarde.png", Region = "Kalos", Weakness = "Fée", CanEvolve = false, AtqSign = "Force Chtonienne" }
 
-                };
+    };
+
             InitializeComponent();
 
             UpdatePokemonList();
@@ -93,7 +94,8 @@ new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gard
                 ImagePath = txtImagePath.Text,
                 Region = cmbRegion.SelectedItem.ToString(),
                 Weakness = cmbWeak.SelectedItem.ToString(),
-                AtqSign = textAtqS.Text
+                AtqSign = textAtqS.Text,
+               
             };
 
             pokemons.Add(pokemon);
@@ -156,6 +158,7 @@ new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gard
                     selectedPokemon.Weakness = cmbWeak.Text;
                     selectedPokemon.AtqSign = textAtqS.Text;
 
+
                     UpdatePokemonList();
                     ClearInputFields();
                 }
@@ -182,7 +185,7 @@ new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gard
                 txtImagePath.Text = selectedPokemon.ImagePath;
                 cmbRegion.SelectedItem = selectedPokemon.Region;
                 cmbWeak.SelectedItem = selectedPokemon.Weakness;
-                textAtqS.Text = selectedPokemon.AtqSign;
+                string imgType = ImagesFolderPath + selectedPokemon.Type + ".png";
 
                 if (!string.IsNullOrEmpty(selectedPokemon.ImagePath) && System.IO.File.Exists(selectedPokemon.ImagePath))
                 {
@@ -191,6 +194,15 @@ new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gard
                 else
                 {
                     pictureBoxPokemon.Image = null; // Si aucune image, vide le PictureBox
+                }
+
+                if (!string.IsNullOrEmpty(selectedPokemon.Type) && System.IO.File.Exists(imgType))
+                {
+                    pictureBoxType.ImageLocation = imgType;
+                }
+                else
+                {
+                    pictureBoxType.Image = null; // Si aucune image, vide le PictureBox
                 }
 
 
@@ -226,6 +238,7 @@ new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gard
             chkCaptured.Checked = false;
             chkEvolve.Checked = false;
             txtImagePath.Text = "";
+            textImgTypePath.Text = "";
             pictureBoxPokemon.ImageLocation = null;
             textAtqS.Text = "";
         }
