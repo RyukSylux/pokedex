@@ -507,14 +507,13 @@ namespace PokedexApp
 
         private void cmbType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBoxPokemons.SelectedItem is Pokemon selectedPokemon)
-            {
-                string imgType = ImagesFolderPath + selectedPokemon.Type + ".png";
-                if (!string.IsNullOrEmpty(selectedPokemon.Type) && System.IO.File.Exists(imgType))
+            string cbmType = cmbType.SelectedItem.ToString();
+            string imgType = ImagesFolderPath + cbmType + ".png";
+                if (!string.IsNullOrEmpty(cbmType) && System.IO.File.Exists(imgType))
                 {
                     pictureBoxType.ImageLocation = imgType;
                 }
-            }
+            
 
         }
     }
