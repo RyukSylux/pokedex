@@ -89,6 +89,7 @@ namespace PokedexApp
         public Form1()
         {
             // Liste de Pokémon préremplis
+
             pokemons = new List<Pokemon>
                 {
                     new Pokemon { ID = 1, Name = "Bulbizarre", Type = "Plante", Description = "Un Pokémon graine qui aime le soleil.", Weight = 6.9, Height = 0.7, IsCaptured = true, ImagePath = ImagesFolderPath + "bulbizarre.png", Region = "Kanto", Weakness = "Feu", CanEvolve = true, AtqSign = "Fouet Lianes",Attacks = new List<string> { "Fouet Lianes", "Tranch'Herbe", "Canon Graine", "Dard-Venin" } },
@@ -120,7 +121,7 @@ namespace PokedexApp
                     new Pokemon { ID = 27, Name = "Balignon", Type = "Plante", Description = "Il ressemble à un champignon.", Weight = 4.5, Height = 0.3, IsCaptured = false, ImagePath = ImagesFolderPath + "balignon.png", Region = "Hoenn", Weakness = "Feu", CanEvolve = true, AtqSign = "Spore Coton", Attacks = new List<string> { "Spore Coton", "Fouet Lianes", "Poudre Dodo", "Tranch'Herbe" } },
                     new Pokemon { ID = 28, Name = "Pachirisu", Type = "Électrique", Description = "Un écureuil électrique rapide.", Weight = 3.9, Height = 0.4, IsCaptured = true, ImagePath = ImagesFolderPath + "pachirisu.png", Region = "Sinnoh", Weakness = "Sol", CanEvolve = false, AtqSign = "Parabocharge", Attacks = new List<string> { "Parabocharge", "Tonnerre", "Vive-Attaque", "Queue de Fer" } },
                     new Pokemon { ID = 29, Name = "Démanta", Type = "Eau", Description = "Un Pokémon marin qui glisse sur l'eau.", Weight = 220.0, Height = 2.1, IsCaptured = false, ImagePath = ImagesFolderPath + "demanta.png", Region = "Johto", Weakness = "Électrique", CanEvolve = false, AtqSign = "Surf", Attacks = new List<string> { "Surf", "Barrage", "Hydrocanon", "Plongeon" } },
-                    new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gardien de l'équilibre écologique.", Weight = 305.0, Height = 5.0, IsCaptured = true, ImagePath = ImagesFolderPath + "zygarde.png", Region = "Kalos", Weakness = "Fée", CanEvolve = false, AtqSign = "Force Chtonienne", Attacks = new List<string> { "Force Chtonienne", "Draco-Queue", "Séisme", "Lance-Dragon" } }             
+                    new Pokemon { ID = 30, Name = "Zygarde", Type = "Dragon", Description = "Le gardien de l'équilibre écologique.", Weight = 305.0, Height = 5.0, IsCaptured = true, ImagePath = ImagesFolderPath + "zygarde.png", Region = "Kalos", Weakness = "Fée", CanEvolve = false, AtqSign = "Force Chtonienne", Attacks = new List<string> { "Force Chtonienne", "Draco-Queue", "Séisme", "Lance-Dragon" } }
                 };
             InitializeComponent();
             UpdatePokemonList();
@@ -278,6 +279,7 @@ namespace PokedexApp
                 cmbRegion.SelectedItem = selectedPokemon.Region;
                 cmbWeak.SelectedItem = selectedPokemon.Weakness;
                 textAtqS.Text = selectedPokemon.AtqSign;
+                string imgType = ImagesFolderPath + selectedPokemon.Type + ".png";
 
                 if (selectedPokemon.Attacks.Count >= 1) comboBoxAttck1.SelectedItem = selectedPokemon.Attacks[0]; else { comboBoxAttck1.SelectedIndex = 0; }
                 if (selectedPokemon.Attacks.Count >= 2) comboBoxAttck2.SelectedItem = selectedPokemon.Attacks[1]; else { comboBoxAttck2.SelectedIndex = 0; }
@@ -297,6 +299,15 @@ namespace PokedexApp
                 else
                 {
                     pictureBoxPokemon.Image = null; // Si aucune image, vide le PictureBox
+                }
+
+                if (!string.IsNullOrEmpty(selectedPokemon.Type) && System.IO.File.Exists(imgType))
+                {
+                    pictureBoxType.ImageLocation = imgType;
+                }
+                else
+                {
+                    pictureBoxType.Image = null; // Si aucune image, vide le PictureBox
                 }
 
 
@@ -492,6 +503,19 @@ namespace PokedexApp
         private void newPkm_Click(object sender, EventArgs e)
         {
             ClearInputFields();
+        }
+
+        private void cmbType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxPokemons.SelectedItem is Pokemon selectedPokemon)
+            {
+                string imgType = ImagesFolderPath + selectedPokemon.Type + ".png";
+                if (!string.IsNullOrEmpty(selectedPokemon.Type) && System.IO.File.Exists(imgType))
+                {
+                    pictureBoxType.ImageLocation = imgType;
+                }
+            }
+
         }
     }
 }
