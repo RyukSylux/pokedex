@@ -136,7 +136,7 @@ namespace PokedexApp
                             // Stocker le chemin de l'image temporairement
                             txtImagePath.Text = openFileDialog.FileName;
                         }
-                        else
+                        else if (txtImagePath.Text == "")
                         {
                             pictureBoxPokemon.ImageLocation = ImagesFolderPath + "missingno.png";
                             txtImagePath.Text = ImagesFolderPath + "missingno.png";

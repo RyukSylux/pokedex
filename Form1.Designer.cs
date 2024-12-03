@@ -46,6 +46,10 @@ namespace PokedexApp
             txtImagePath = new TextBox();
             pictureBox1 = new PictureBox();
             groupBox1 = new GroupBox();
+            comboBoxAttck4 = new ComboBox();
+            comboBoxAttck3 = new ComboBox();
+            comboBoxAttck2 = new ComboBox();
+            comboBoxAttck1 = new ComboBox();
             label1 = new Label();
             pictureBox2 = new PictureBox();
             labelAtq = new Label();
@@ -57,10 +61,6 @@ namespace PokedexApp
             cmbRegion = new ComboBox();
             txtDescription = new RichTextBox();
             btnSearchByRegion = new Button();
-            comboBoxAttck1 = new ComboBox();
-            comboBoxAttck2 = new ComboBox();
-            comboBoxAttck3 = new ComboBox();
-            comboBoxAttck4 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPokemon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
@@ -264,6 +264,38 @@ namespace PokedexApp
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             // 
+            // comboBoxAttck4
+            // 
+            comboBoxAttck4.FormattingEnabled = true;
+            comboBoxAttck4.Location = new Point(13, 334);
+            comboBoxAttck4.Name = "comboBoxAttck4";
+            comboBoxAttck4.Size = new Size(121, 23);
+            comboBoxAttck4.TabIndex = 29;
+            // 
+            // comboBoxAttck3
+            // 
+            comboBoxAttck3.FormattingEnabled = true;
+            comboBoxAttck3.Location = new Point(219, 334);
+            comboBoxAttck3.Name = "comboBoxAttck3";
+            comboBoxAttck3.Size = new Size(121, 23);
+            comboBoxAttck3.TabIndex = 28;
+            // 
+            // comboBoxAttck2
+            // 
+            comboBoxAttck2.FormattingEnabled = true;
+            comboBoxAttck2.Location = new Point(219, 293);
+            comboBoxAttck2.Name = "comboBoxAttck2";
+            comboBoxAttck2.Size = new Size(121, 23);
+            comboBoxAttck2.TabIndex = 27;
+            // 
+            // comboBoxAttck1
+            // 
+            comboBoxAttck1.FormattingEnabled = true;
+            comboBoxAttck1.Location = new Point(13, 293);
+            comboBoxAttck1.Name = "comboBoxAttck1";
+            comboBoxAttck1.Size = new Size(121, 23);
+            comboBoxAttck1.TabIndex = 26;
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -372,38 +404,6 @@ namespace PokedexApp
             btnSearchByRegion.Text = "Rechercher par Région";
             btnSearchByRegion.UseVisualStyleBackColor = true;
             btnSearchByRegion.Click += btnSearchByRegion_Click;
-            // 
-            // comboBoxAttck1
-            // 
-            comboBoxAttck1.FormattingEnabled = true;
-            comboBoxAttck1.Location = new Point(13, 293);
-            comboBoxAttck1.Name = "comboBoxAttck1";
-            comboBoxAttck1.Size = new Size(121, 23);
-            comboBoxAttck1.TabIndex = 26;
-            // 
-            // comboBoxAttck2
-            // 
-            comboBoxAttck2.FormattingEnabled = true;
-            comboBoxAttck2.Location = new Point(219, 293);
-            comboBoxAttck2.Name = "comboBoxAttck2";
-            comboBoxAttck2.Size = new Size(121, 23);
-            comboBoxAttck2.TabIndex = 27;
-            // 
-            // comboBoxAttck3
-            // 
-            comboBoxAttck3.FormattingEnabled = true;
-            comboBoxAttck3.Location = new Point(219, 334);
-            comboBoxAttck3.Name = "comboBoxAttck3";
-            comboBoxAttck3.Size = new Size(121, 23);
-            comboBoxAttck3.TabIndex = 28;
-            // 
-            // comboBoxAttck4
-            // 
-            comboBoxAttck4.FormattingEnabled = true;
-            comboBoxAttck4.Location = new Point(13, 334);
-            comboBoxAttck4.Name = "comboBoxAttck4";
-            comboBoxAttck4.Size = new Size(121, 23);
-            comboBoxAttck4.TabIndex = 29;
             // 
             // Form1
             // 
