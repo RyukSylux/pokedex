@@ -61,6 +61,7 @@ namespace PokedexApp
             cmbRegion = new ComboBox();
             txtDescription = new RichTextBox();
             btnSearchByRegion = new Button();
+            newPkm = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPokemon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
@@ -69,7 +70,7 @@ namespace PokedexApp
             // 
             // buttonSearchName
             // 
-            buttonSearchName.Location = new Point(154, 471);
+            buttonSearchName.Location = new Point(273, 413);
             buttonSearchName.Margin = new Padding(3, 2, 3, 2);
             buttonSearchName.Name = "buttonSearchName";
             buttonSearchName.Size = new Size(137, 23);
@@ -113,7 +114,7 @@ namespace PokedexApp
             // btnEdit
             // 
             btnEdit.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnEdit.Location = new Point(187, 413);
+            btnEdit.Location = new Point(615, 519);
             btnEdit.Margin = new Padding(3, 2, 3, 2);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(66, 24);
@@ -124,7 +125,7 @@ namespace PokedexApp
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(333, 413);
+            btnDelete.Location = new Point(808, 519);
             btnDelete.Margin = new Padding(3, 2, 3, 2);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(77, 24);
@@ -135,7 +136,7 @@ namespace PokedexApp
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(38, 413);
+            btnAdd.Location = new Point(524, 519);
             btnAdd.Margin = new Padding(3, 2, 3, 2);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(66, 24);
@@ -396,14 +397,24 @@ namespace PokedexApp
             // 
             // btnSearchByRegion
             // 
-            btnSearchByRegion.Location = new Point(154, 495);
+            btnSearchByRegion.Location = new Point(38, 413);
             btnSearchByRegion.Margin = new Padding(3, 2, 3, 2);
             btnSearchByRegion.Name = "btnSearchByRegion";
-            btnSearchByRegion.Size = new Size(137, 23);
+            btnSearchByRegion.Size = new Size(159, 23);
             btnSearchByRegion.TabIndex = 17;
             btnSearchByRegion.Text = "Rechercher par Région";
             btnSearchByRegion.UseVisualStyleBackColor = true;
             btnSearchByRegion.Click += btnSearchByRegion_Click;
+            // 
+            // newPkm
+            // 
+            newPkm.Location = new Point(712, 520);
+            newPkm.Name = "newPkm";
+            newPkm.Size = new Size(75, 23);
+            newPkm.TabIndex = 18;
+            newPkm.Text = "Nouveau Pkm";
+            newPkm.UseVisualStyleBackColor = true;
+            newPkm.Click += newPkm_Click;
             // 
             // Form1
             // 
@@ -412,6 +423,7 @@ namespace PokedexApp
             BackgroundImage = Properties.Resources.emptyTile;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(911, 575);
+            Controls.Add(newPkm);
             Controls.Add(listBoxPokemons);
             Controls.Add(groupBox1);
             Controls.Add(buttonSearchName);
@@ -468,5 +480,6 @@ namespace PokedexApp
         private ComboBox comboBoxAttck3;
         private ComboBox comboBoxAttck2;
         private ComboBox comboBoxAttck1;
+        private Button newPkm;
     }
 }

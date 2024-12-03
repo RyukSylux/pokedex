@@ -77,28 +77,36 @@ namespace PokedexApp
                     txtImagePath.Text = ImagesFolderPath + "missingno.png";
                 }
             }
-
-            // Ajouter un Pokémon
-            var pokemon = new Pokemon
+            try
             {
-                ID = nextId++,
-                Name = txtName.Text,
-                Description = txtDescription.Text,
-                Type = cmbType.SelectedItem.ToString(),
-                Weight = double.Parse(txtWeight.Text),
-                Height = double.Parse(txtHeight.Text),
-                IsCaptured = chkCaptured.Checked,
-                CanEvolve = chkEvolve.Checked,
-                ImagePath = txtImagePath.Text,
-                Region = cmbRegion.SelectedItem.ToString(),
-                Weakness = cmbWeak.SelectedItem.ToString(),
-                AtqSign = textAtqS.Text,
-                Attacks = new List<string> { comboBoxAttck1.Text, comboBoxAttck2.Text, comboBoxAttck3.Text, comboBoxAttck4.Text }
-            };
-
-            pokemons.Add(pokemon);
-            UpdatePokemonList();
-            listBoxPokemons.SelectedIndex = pokemon.ID-1;
+                if (ValidateInputFields())
+                {
+                    // Ajouter un Pokémon
+                    var pokemon = new Pokemon
+                    {
+                        ID = nextId++,
+                        Name = txtName.Text,
+                        Description = txtDescription.Text,
+                        Type = cmbType.SelectedItem.ToString(),
+                        Weight = double.Parse(txtWeight.Text),
+                        Height = double.Parse(txtHeight.Text),
+                        IsCaptured = chkCaptured.Checked,
+                        CanEvolve = chkEvolve.Checked,
+                        ImagePath = txtImagePath.Text,
+                        Region = cmbRegion.SelectedItem.ToString(),
+                        Weakness = cmbWeak.SelectedItem.ToString(),
+                        AtqSign = textAtqS.Text,
+                        Attacks = new List<string> { comboBoxAttck1.Text, comboBoxAttck2.Text, comboBoxAttck3.Text, comboBoxAttck4.Text }
+                    };
+                    pokemons.Add(pokemon);
+                    UpdatePokemonList();
+                    listBoxPokemons.SelectedItem = pokemon;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Une erreur s'est produite lors de l'ajout du Pokémon : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -108,6 +116,7 @@ namespace PokedexApp
             {
                 pokemons.Remove(selectedPokemon);
                 UpdatePokemonList();
+                ClearInputFields();
             }
             else
             {
@@ -155,11 +164,11 @@ namespace PokedexApp
                     selectedPokemon.Region = cmbRegion.Text;
                     selectedPokemon.Weakness = cmbWeak.Text;
                     selectedPokemon.AtqSign = textAtqS.Text;
-                    selectedPokemon.Attacks = new List<string> { comboBoxAttck1.Text, comboBoxAttck2.Text,comboBoxAttck3.Text,comboBoxAttck4.Text};
+                    selectedPokemon.Attacks = new List<string> { comboBoxAttck1.Text, comboBoxAttck2.Text, comboBoxAttck3.Text, comboBoxAttck4.Text };
 
                     UpdatePokemonList();
 
-                    listBoxPokemons.SelectedItem= txtName.Text;
+                    listBoxPokemons.SelectedItem = txtName.Text;
                 }
             }
             else
@@ -231,18 +240,22 @@ namespace PokedexApp
 
         private void ClearInputFields()
         {
-            txtName.Text = "";
-            txtDescription.Text = "";
-            cmbType.SelectedIndex = 0;
-            cmbRegion.SelectedIndex = 0;
-            cmbType.SelectedIndex = 0;
-            txtWeight.Text = "";
-            txtHeight.Text = "";
+            txtName.Text = null;
+            txtDescription.Text = null;
+            cmbType.SelectedIndex = -1;
+            cmbRegion.SelectedIndex = -1;
+            cmbWeak.SelectedIndex = -1;
+            txtWeight.Text = null;
+            txtHeight.Text = null;
             chkCaptured.Checked = false;
             chkEvolve.Checked = false;
-            txtImagePath.Text = "";
+            txtImagePath.Text = null;
             pictureBoxPokemon.ImageLocation = null;
-            textAtqS.Text = "";
+            textAtqS.Text = null;
+            comboBoxAttck1.SelectedIndex = 0;
+            comboBoxAttck2.SelectedIndex = 0;
+            comboBoxAttck3.SelectedIndex = 0;
+            comboBoxAttck4.SelectedIndex = 0;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -456,6 +469,11 @@ namespace PokedexApp
         private void btnSearchByRegion_Click(object sender, EventArgs e)
         {
             SearchByRegion();
+        }
+
+        private void newPkm_Click(object sender, EventArgs e)
+        {
+            ClearInputFields();
         }
     }
 }
