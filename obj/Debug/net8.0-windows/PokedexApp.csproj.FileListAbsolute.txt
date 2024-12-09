@@ -274,3 +274,4 @@ C:\Users\sylux\Documents\Trieur\github\test\pokedex\obj\Debug\net8.0-windows\ref
 C:\Users\sylux\Documents\Trieur\github\test\pokedex\obj\Debug\net8.0-windows\PokedexApp.pdb
 C:\Users\sylux\Documents\Trieur\github\test\pokedex\obj\Debug\net8.0-windows\PokedexApp.genruntimeconfig.cache
 C:\Users\sylux\Documents\Trieur\github\test\pokedex\obj\Debug\net8.0-windows\ref\PokedexApp.dll
+C:\Users\pablo\source\repos\pokedex\obj\Debug\net8.0-windows\PokedexApp.AttackDex.resources

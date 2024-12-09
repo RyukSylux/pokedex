@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Drawing.Text;
 using System.Reflection;
 using System.Data;
+using static System.Windows.Forms.DataFormats;
 
 namespace PokedexApp
 {
@@ -508,12 +509,20 @@ namespace PokedexApp
 
         private void cmbType_SelectedIndexChanged(object sender, EventArgs e)
         {
-                string cbmType = cmbType.SelectedItem.ToString();
-                string imgType = ImagesFolderPath + cbmType + ".png";
-                if (!string.IsNullOrEmpty(cbmType) && System.IO.File.Exists(imgType))
-                {
-                    pictureBoxType.ImageLocation = imgType;
-                }
+            string cbmType = cmbType.SelectedItem.ToString();
+            string imgType = ImagesFolderPath + cbmType + ".png";
+            if (!string.IsNullOrEmpty(cbmType) && System.IO.File.Exists(imgType))
+            {
+                pictureBoxType.ImageLocation = imgType;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AttackDex attackDex = new AttackDex();
+
+            // Affiche le formulaire (mode non modal)
+            attackDex.Show();
         }
     }
 }
